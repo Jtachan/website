@@ -6,8 +6,8 @@ I develop Python (primary language) and Rust (secondary language) tools and libr
 Everything you can find here is open-source, where I explain the full process for anyone to be able to understand and recreate the projects.
 
 <div>
-    <img alt="GitHub Stats" src="./assets/profile/gh_stats.svg" href="https://github.com/Jtachan"/>
-    <img alt="Most used languages: Python, Rust, C++, Javascript, HTML" src="./assets/profile/top_langs.svg" href="https://github.com/Jtachan"/>
+    <img alt="GitHub Stats" src="https://github.com/Jtachan/Jtachan/blob/main/profile/gh_stats.svg"/>
+    <img alt="Most used languages: Python, Rust, C++, Javascript, HTML" src="https://github.com/Jtachan/Jtachan/blob/main/profile/top_langs.svg"/>
 </div>
 
 ## Project index table
