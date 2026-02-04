@@ -1,0 +1,62 @@
+site_name: Jtachan website
+site_description: "Findings, thoughts, tutorials, work. Pieces of my mind!"
+site_url: "https://jtachan.github.io/"
+repo_url: "https://github.com/Jtachan/Jtachan/"
+repo_name: "Jtachan/Jtachan"
+
+nav:
+  - Home: index.md
+  # - About: about.md  # WIP
+
+theme:
+  name: material
+  features:
+    - announce.dismiss
+    - content.tooltips
+    - content.code.annotate
+    - content.code.copy
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+extra_javascript:
+  - js/project_table.js
+
+extra_css:
+  - stylesheet/project_table.css
+  - stylesheet/extra.css
+
+markdown_extensions:
+  - admonition  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admonition#supported-types
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - toc:
+      permalink: true
+
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/jtachan
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/jaime-gonzalezg/
