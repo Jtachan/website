@@ -4,8 +4,29 @@
 |-----------------------------------------------------|---------------|
 | [PyBackport](https://github.com/Jtachan/PyBackport) | Python        | 
 
-!!! Todo
-    Add GIF displaying that the pkg works
+The goal of `PyBackport` is to enable the use of new classes and functionalities from newer into older python releases.
+While the use of newer python releases is always recommended, there are software releases which constrains are to support old python releases.
+These software-tools would, for example, abstened of using `str.removeprefix()` if they offer support to python previous than 3.9.
+
+With this purpose, any class imported from `PyBackport` corresponds to:
+
+- The original built-in object if it exists in the current python installation.
+- The backported class if the method/object is missing in the current python installation.
+
+The tool also provides its own API documentation: https://jtachan.github.io/PyBackport/
+
+!!! Note
+    This is my first ever owned Open Source software.
+    I created it with the idea of it being also supported by the community, but its scope is quite small right now.
+    It might never reach many people, but I still find places where it comes in handy to install my first OS project.
+
+![tests_badge](https://github.com/Jtachan/PyBackport/actions/workflows/CI.yml/badge.svg)
+[![PyPI Version](https://img.shields.io/pypi/v/PyBackport)](https://pypi.org/project/PyBackport/)
+[![Python Version: 3.8+](https://img.shields.io/badge/python-3.8+-blue)](https://www.python.org/downloads/) 
+[![MIT License](https://img.shields.io/github/license/Jtachan/PyBackport)](https://github.com/Jtachan/PyBackport/blob/master/LICENSE)
+[![PyPI monthly downloads](https://img.shields.io/pypi/dm/PyBackport)](https://pypi.org/project/PyBackport/) 
+[![Docs](https://img.shields.io/badge/Read_the_docs-blue)](https://Jtachan.github.io/PyBackport/)
+[![GH stars](https://img.shields.io/github/stars/Jtachan/PyBackport)](https://github.com/Jtachan/PyBackport/) 
 
 ## Motivation
 
@@ -62,6 +83,46 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 
 ### Enums
 
-The biggest difference to backport was not that `StrEnum` was integrated, but rather that many enums were invoking the member's value for calls and string representations
+The biggest difference to backport was not that `StrEnum` was integrated, but rather that many enums were invoking the member's value for calls and string representations.
+This affected other enum types, like `IntEnum`, by now inheriting from `ReprEnum`, a new class which would set only the `__repr__` call to enum.
 
-### Built-ins
+```python
+class ReprEnum(enum.Enum):
+    """Updates 'repr', leaving 'str' and 'format' to the builtin class.
+
+    Backported from py3.11.
+    """
+
+    def __str__(self) -> str:
+        """String through the builtin class."""
+        return self.value.__str__()
+
+    def __format__(self, format_spec: str) -> str:
+        """Format through the builtin class."""
+        return self.value.__format__(format_spec)
+```
+
+### Builtins
+
+Backporting builtins is somewhat controversial in Python, as it requires to:
+
+- Shadow an existing name variable.
+- Inherit from `builtins` (like `dict`) rather than from `collections` (like `UserDict`).
+
+But they offer another layer of abstraction into the code for using them:
+When using a special class, like enumerations, they need to be imported no mater the Python release.
+This is not the case for builtins, requiring to call a wrapper over these instances.
+
+```pycon
+# Assuming python 3.8, where `dict` does not support the `|` (or)  operand
+>>> from py_back.builtins import dict
+>>> d1 = {"key_0": 1}
+>>> d1 |= {"key_1": 2}  # Dicts initialized without the constructor don't have backported functionalities
+Traceback (most recent call last):
+    ...
+TypeError: unsupported operand type(s) for |=: 'dict' and 'dict'
+>>> d1 = dict(d1)
+>>> d1 |= {"key_1": 2}
+>>> d1
+{'key_0': 1, 'key_1': 2}
+```
