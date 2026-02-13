@@ -7,6 +7,9 @@ repo_name: "Jtachan/Jtachan"
 nav:
   - Home: index.md
   # - About: about.md  # WIP
+  - Projects:
+      - Python:
+          - PyBackport: projects/pybackport.md
 
 theme:
   name: material
@@ -50,6 +53,7 @@ markdown_extensions:
   - admonition  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admonition#supported-types
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.snippets
   - footnotes
   - toc:
       permalink: true
