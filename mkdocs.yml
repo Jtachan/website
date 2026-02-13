@@ -6,10 +6,12 @@ repo_name: "Jtachan/Jtachan"
 
 nav:
   - Home: index.md
-  # - About: about.md  # WIP
   - Projects:
       - Python:
           - PyBackport: projects/pybackport.md
+
+exclude_docs: |
+  requirements.txt
 
 theme:
   name: material
