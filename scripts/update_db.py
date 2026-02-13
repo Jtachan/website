@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 from datetime import datetime
+import requests
 
 BASE_ENTRIES = {
     "name": "",  # Project name
@@ -11,9 +12,12 @@ BASE_ENTRIES = {
     "descr": "",  # Basic project description
     "repo": "",  # Link to the repository
     "post": "",  # Link to the post
-    "date": "",  # Date of the project finalization in ISO format YYYY.MM.DD
+    "date": "",  # Start date of the project finalization in ISO format YYYY.MM.DD
+    "update": "",  # ISO date of the last commit at 'main'/'master'
 }
 PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
+
+FETCH_LAST_COMMIT = False
 
 
 def check_db_entries():
@@ -33,8 +37,31 @@ def check_db_entries():
             if key not in entry:
                 entry[key] = val
 
+        if FETCH_LAST_COMMIT and entry["repo"] != "":
+            entry["update"] = get_repo_dates(entry["repo"])
+
     with open(PROJECTS_DB_PATH, "w", encoding="utf-8") as db:
         json.dump(entries, db, indent=2)
+
+
+def get_repo_dates(repo_link: str) -> tuple[str, str]:
+    """Provides the dates of the newest (last) commit.
+
+    The code uses the GitHub REST API, which has a limit of 60 requests per hour.
+    For that reason, the oldest (first) commit is actually not fetched (as it would require to
+    fetch all commits and that would make more than 60 requests).
+
+    Still, the code would be to fetch all commits, convert them to JSON and access
+    the last element.
+    """
+    repo_name = repo_link.rsplit("/", maxsplit=1)[-1]
+    commits_api = f"https://api.github.com/repos/Jtachan/{repo_name}/commits"
+
+    last_response = requests.get(commits_api, params={"per_page": 1})
+    raw_date = last_response.json()[0]["commit"]["committer"]["date"]
+
+    newest_date = datetime.strptime(raw_date, "%Y-%m-%dT%H:%M:%SZ")
+    return newest_date.strftime("%Y.%m.%d")
 
 
 def sort_db():
