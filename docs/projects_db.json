@@ -14,20 +14,8 @@
     "descr": "Interactive and quick table for easy and fast access to a small dataset.",
     "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
     "post": "",
-    "date": "2025.11.26"
-  },
-  {
-    "name": "PyBackport",
-    "lang": [
-      "Python"
-    ],
-    "descr": "Backporting Python objects from newer to older Python versions.",
-    "repo": "https://github.com/Jtachan/PyBackport",
-    "tech": [
-      ""
-    ],
-    "post": "",
-    "date": "2025.10.23"
+    "date": "2025.11.16",
+    "update": "2026.02.04"
   },
   {
     "name": "PyQt-Sudoku",
@@ -40,7 +28,22 @@
     "descr": "Sudoku GUI generated with Python",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
     "post": "",
-    "date": "2024.11.24"
+    "date": "2024.11.19",
+    "update": "2024.11.24"
+  },
+  {
+    "name": "PyBackport",
+    "lang": [
+      "Python"
+    ],
+    "descr": "Backporting Python objects from newer to older Python versions.",
+    "repo": "https://github.com/Jtachan/PyBackport",
+    "tech": [
+      ""
+    ],
+    "post": "",
+    "date": "2024.03.20",
+    "update": "2026.02.12"
   },
   {
     "name": "Conway's Game of Life",
@@ -53,7 +56,8 @@
     "descr": "Simulation generated to experiment about other algorithms.",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
     "post": "",
-    "date": "2024.03.10"
+    "date": "2024.02.16",
+    "update": "2024.11.24"
   },
   {
     "name": "Rubik's Simulator",
@@ -66,7 +70,8 @@
     "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
     "repo": "https://github.com/Jtachan/Rubik_sim",
     "post": "",
-    "date": "2024.02.08"
+    "date": "2023.09.01",
+    "update": "2024.02.24"
   },
   {
     "name": "Enigma Cipher",
@@ -79,7 +84,8 @@
     "descr": "Cipher coded to mimic the enigma machine structure, but allowing customization.",
     "repo": "https://github.com/Jtachan/enigma_cipher",
     "post": "",
-    "date": "2023.07.03"
+    "date": "2023.07.09",
+    "update": "2023.09.03"
   },
   {
     "name": "Gitr",
@@ -92,7 +98,8 @@
     "tech": [
       ""
     ],
-    "date": ""
+    "date": "",
+    "update": ""
   },
   {
     "name": "DB Manager",
@@ -105,6 +112,7 @@
       ""
     ],
     "post": "",
-    "date": ""
+    "date": "",
+    "update": ""
   }
 ]
