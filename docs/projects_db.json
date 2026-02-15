@@ -86,33 +86,5 @@
     "post": "",
     "date": "2023.07.09",
     "update": "2023.09.03"
-  },
-  {
-    "name": "Gitr",
-    "lang": [
-      "Rust"
-    ],
-    "descr": "Git clone using Rust.",
-    "repo": "",
-    "post": "",
-    "tech": [
-      ""
-    ],
-    "date": "",
-    "update": ""
-  },
-  {
-    "name": "DB Manager",
-    "lang": [
-      "Python"
-    ],
-    "descr": "Python GUI to work with SQLite3 databases (files).",
-    "repo": "",
-    "tech": [
-      ""
-    ],
-    "post": "",
-    "date": "",
-    "update": ""
   }
 ]

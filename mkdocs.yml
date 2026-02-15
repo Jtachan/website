@@ -9,6 +9,7 @@ nav:
   - Projects:
       - Python:
           - PyBackport: projects/pybackport.md
+      - Next up: projects/nextup.md
 
 exclude_docs: |
   requirements.txt
