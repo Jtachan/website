@@ -11,7 +11,8 @@ nav:
       - Next up: projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
-      - Next up: projects/nextup.md
+      - JavaScript:
+          - DnD Spell Table: projects/spells.md
 
 exclude_docs: |
   requirements.txt
