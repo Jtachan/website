@@ -1,8 +1,8 @@
 site_name: Jtachan website
 site_description: "Findings, thoughts, tutorials, work. Pieces of my mind!"
 site_url: "https://jtachan.github.io/"
-repo_url: "https://github.com/Jtachan/Jtachan/"
-repo_name: "Jtachan/Jtachan"
+repo_url: "https://github.com/Jtachan/website/"
+repo_name: "Jtachan/website"
 
 nav:
   - Home: index.md
