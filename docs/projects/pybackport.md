@@ -1,8 +1,8 @@
 # PyBackport: Backporting from newer Python releases
 
-| GitHub Repo | Main Language | Released docs | Status |
-| --- | --- | --- | --- |
-| [PyBackport](https://github.com/Jtachan/PyBackport) | Python | [![Read the docs](https://img.shields.io/badge/Read_the_docs-blue)](https://Jtachan.github.io/PyBackport/) | <span style="color: blue">Maintained</span> |
+| GitHub Repo | Main Language |  Status |
+| --- | --- | --- |
+| [PyBackport](https://github.com/Jtachan/PyBackport) | Python | <span style="color: blue">Maintained</span> |
 
 ![tests_badge](https://github.com/Jtachan/PyBackport/actions/workflows/CI.yml/badge.svg)
 [![PyPI Version](https://img.shields.io/pypi/v/PyBackport)](https://pypi.org/project/PyBackport/)

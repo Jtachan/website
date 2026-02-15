@@ -7,6 +7,8 @@ repo_name: "Jtachan/website"
 nav:
   - Home: index.md
   - Projects:
+      - Index: proj_index.md
+      - Next up: projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
       - Next up: projects/nextup.md
