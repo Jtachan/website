@@ -39,7 +39,7 @@
     "descr": "Backporting Python objects from newer to older Python versions.",
     "repo": "https://github.com/Jtachan/PyBackport",
     "tech": [
-      ""
+      "MkDocs"
     ],
     "post": "",
     "date": "2024.03.20",
