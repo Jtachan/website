@@ -31,26 +31,23 @@ theme:
     - search.suggest
     - search.highlight
     - toc.follow
+
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+    - scheme: rust
+      primary: custom
+      accent: custom
+
+  font:
+    text: Source Serif 4
+    code: Source Code Pro
 
 extra_javascript:
   - js/project_table.js
+  - https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Code+Pro&display=swap
 
 extra_css:
   - stylesheet/project_table.css
-  - stylesheet/extra.css
+  - stylesheet/theme.css
 
 markdown_extensions:
   - admonition  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admonition#supported-types
