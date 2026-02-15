@@ -1,24 +1,8 @@
 # PyBackport: Backporting from newer Python releases
 
-| GitHub Repo                                         | Main Language |
-|-----------------------------------------------------|---------------|
-| [PyBackport](https://github.com/Jtachan/PyBackport) | Python        | 
-
-The goal of `PyBackport` is to enable the use of new classes and functionalities from newer into older python releases.
-While the use of newer python releases is always recommended, there are software releases which constrains are to support old python releases.
-These software-tools would, for example, abstened of using `str.removeprefix()` if they offer support to python previous than 3.9.
-
-With this purpose, any class imported from `PyBackport` corresponds to:
-
-- The original built-in object if it exists in the current python installation.
-- The backported class if the method/object is missing in the current python installation.
-
-The tool also provides its own API documentation: https://jtachan.github.io/PyBackport/
-
-!!! Note
-    This is my first ever owned Open Source software.
-    I created it with the idea of it being also supported by the community, but its scope is quite small right now.
-    It might never reach many people, but I still find places where it comes in handy to install my first OS project.
+| GitHub Repo | Main Language | Released docs | Status |
+| --- | --- | --- | --- |
+| [PyBackport](https://github.com/Jtachan/PyBackport) | Python | [![Read the docs](https://img.shields.io/badge/Read_the_docs-blue)](https://Jtachan.github.io/PyBackport/) | <span style="color: blue">Maintained</span> |
 
 ![tests_badge](https://github.com/Jtachan/PyBackport/actions/workflows/CI.yml/badge.svg)
 [![PyPI Version](https://img.shields.io/pypi/v/PyBackport)](https://pypi.org/project/PyBackport/)
@@ -27,6 +11,22 @@ The tool also provides its own API documentation: https://jtachan.github.io/PyBa
 [![PyPI monthly downloads](https://img.shields.io/pypi/dm/PyBackport)](https://pypi.org/project/PyBackport/) 
 [![Docs](https://img.shields.io/badge/Read_the_docs-blue)](https://Jtachan.github.io/PyBackport/)
 [![GH stars](https://img.shields.io/github/stars/Jtachan/PyBackport)](https://github.com/Jtachan/PyBackport/) 
+
+The goal of `PyBackport` is to enable the use of new classes and functionalities from newer into older python releases.
+While the use of newer python releases is always recommended, there are software releases which constrains are to support old python releases.
+These software-tools would, for example, absented of using `str.removeprefix()` if they offer support to python previous than 3.9.
+
+With this purpose, any class imported from `PyBackport` corresponds to:
+
+- The original built-in object if it exists in the current python installation.
+- The backported class if the method/object is missing in the current python installation.
+
+![GIF animation displaying how functionalities of `IntEnum` and `StrEnum` are backported to python 3.9](../assets/pr-gif/py_back.gif)
+
+!!! Note
+    This is my first ever owned Open Source software.
+    I created it with the idea of it being also supported by the community, but its scope is quite small right now.
+    It might never reach many people, but I still find places where it comes in handy to install my first OS project.
 
 ## Motivation
 

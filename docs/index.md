@@ -12,10 +12,14 @@ Everything you can find here is open-source, where I explain the full process fo
 
 ## Project index table
 
-Here you can see a table where I organize my projects (finished, ongoing and not started).
-This is mostly an organizing tool for me, but you can use it to jump directly to those projects document or repository.
+There is a table of all the projects I have worked on at the past.
+Some of them are fully finished (without further scope of increasing the project), while others I still maintain or are on-going projects.
 
 !!! tip
     If there is any icon you don't recognize, place the mouse cursor on top of it, and it will display the name of the language or framework.
 
 <div id="project-table"></div>
+
+!!! Note
+    All projects are currently organized by creation date (newer first).
+    I am working on sorting options not for only creation date, but also to display the ones with the last commits first.
