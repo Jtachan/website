@@ -11,6 +11,7 @@ I have no strict date to do them, and I do not consider them as my own property,
 | **Password Manager** | Rust | A password manager that stores and generates passwords to log into accounts. All the passwords should be sotored locally in an encrypted file. |
 | **Board puzzle generator** | Python | Algorithms to generate puzzles at any chess-like board. The puzzles to support should be 'Sudoku', 'Binario', 'Queens', 'Nonograms' and 'Connecting pipes'. |
 | **Rusty logger** | Rust | A multi-threaded .log parser and analyzer to be used only as a CLI tool. It could support multiple log formats (through config file), allow users to search patterns and produce new reports. | 
+| **QR Generator** | Rust | A simple QR generator trying to use as least 3rd-parties packages as possible. The QR could be exported as SVG or PNG. |
 
 !!! Note
     This table is coded as a basic Markdown table, without any sorting nor filtering.
