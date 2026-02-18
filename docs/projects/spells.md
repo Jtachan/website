@@ -4,7 +4,6 @@
 | --- | --- | --- |
 | [DnD Spells (ES)](https://github.com/Jtachan/DnD-5.5-Spells-ES) | JS, CSS | <span style="color: blue">Maintained</span> |
 
-> [Try the table](https://jtachan.github.io/DnD-5.5-Spells-ES/)
 
 This project wasn't my first project where I needed to create an HTML with simple CSS, 
 but it was my first project where I chose to code in JavaScript.
@@ -19,6 +18,10 @@ With that purpose, I created a table that allows:
 - Selection of the units either in imperial or in the metric system.
 - Present a simple UI, allowing to click over an item to display a new window with all expanded information.
 - Not collect any information whatsoever from whomever uses it.
+
+![Animation displaying the table, searching in real time and opening a spell](../assets/pr-gif/spells.gif)
+
+> [Try the table](https://jtachan.github.io/DnD-5.5-Spells-ES/)
 
 !!! note
     At the page, all attributions of every spell released at the SRD (_System Reference Document_) are given to _Wizards of the Coast_ under the terms of CC-BY-4.0.
