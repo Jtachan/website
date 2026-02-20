@@ -33,5 +33,18 @@ We all have our hobbies. One of mine is to play DnD (_Dungeons and Dragons_).
 However, I was not able to find a free and fast tool that would allow players to quickly search DnD spells in real time.
 There are many software tools, but they are either not fast, not free, loaded with adds or not in Spanish (my mother tongue).
 
-For that purpose, and with the new apparition at the time of the LLMs like Chat GPT, Claude, and Gemini;
-I planned how to organize the database for later on ask AI to allow extracting data for me. 
+Thus, I set my mind to create something:
+
+- 100% free without collecting data
+- Quick and clear to use
+- Available from everywhere
+
+I knew this was something achievable with a _JavaScript_ (JS) script and basic CSS, although at this point I had never coded anything really in JS.
+That was my second motivation: I could learn something new.
+
+The only problem with the tool is that almost all data of each spell was obtained through AI:
+I sent the LLM client a picture or a text of the spell and ask to extract the data in a very specific structure.
+However, we all know that AI hallucinates quite a lot and that introduced errors in the data.
+
+Even though I carefully checked as many spells as possible, I know I cannot find all the possible errors.
+That is the reason why I also integrated a **'report issue' button**, which allows to anyone to write me a mail specifying the error they found. 
