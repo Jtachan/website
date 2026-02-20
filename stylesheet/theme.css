@@ -1,0 +1,82 @@
+/* ================================
+   Rust Book Inspired Theme
+   For mkdocs-material
+   ================================ */
+
+[data-md-color-scheme="rust"] {
+
+  /* Primary Rust Orange */
+  --md-primary-fg-color: #d08700;
+  --md-primary-fg-color--light: #e6a84a;
+  --md-primary-fg-color--dark: #a65c00;
+
+  /* Accent */
+  --md-accent-fg-color: #b7410e;
+
+  /* Background - warm paper */
+  --md-default-bg-color: #f5efe6;
+  --md-default-bg-color--light: #faf6ee;
+
+  /* Text */
+  --md-default-fg-color: #2b1e14;
+  --md-default-fg-color--light: #5c3b1e;
+  --md-default-fg-color--lighter: #7a5a3a;
+
+  /* Code */
+  --md-code-bg-color: #f0e6d6;
+  --md-code-fg-color: #2b1e14;
+
+  /* Links */
+  --md-typeset-a-color: #b7410e;
+
+  /* Tables */
+  --md-typeset-table-color: #5c3b1e;
+
+  /* Admonitions */
+  --md-admonition-bg-color: #efe3cf;
+}
+
+/* Typography improvements */
+
+[data-md-color-scheme="rust"] body {
+  font-family: "Source Serif 4", Georgia, serif;
+  background-color: #f5efe6;
+}
+
+[data-md-color-scheme="rust"] h1,
+[data-md-color-scheme="rust"] h2,
+[data-md-color-scheme="rust"] h3,
+[data-md-color-scheme="rust"] h4 {
+  color: #5c3b1e;
+  font-weight: 600;
+}
+
+/* Navigation sidebar */
+[data-md-color-scheme="rust"] .md-nav {
+  background-color: #efe3cf;
+}
+
+/* Top header */
+[data-md-color-scheme="rust"] .md-header {
+  background-color: #d08700;
+}
+
+/* Code blocks */
+[data-md-color-scheme="rust"] pre {
+  background-color: #f0e6d6;
+  border-radius: 6px;
+}
+
+/* Inline code */
+[data-md-color-scheme="rust"] code {
+  background-color: #efe3cf;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Blockquotes */
+[data-md-color-scheme="rust"] blockquote {
+  border-left: 4px solid #d08700;
+  background-color: #efe3cf;
+  padding: 0.5rem 1rem;
+}
