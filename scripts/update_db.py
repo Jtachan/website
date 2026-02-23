@@ -86,4 +86,4 @@ def sort_db(sort_by_update: bool = False):
 
 if __name__ == "__main__":
     check_db_entries()
-    sort_db(True)
+    sort_db()
