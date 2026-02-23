@@ -15,6 +15,9 @@ nav:
           - PyBackport: projects/pybackport.md
       - JavaScript:
           - DnD Spell Table: projects/spells.md
+  - Contributions:
+      - Index: contrib_index.md
+      - dsiUnits: contributions/dsi_units.md
 
 exclude_docs: |
   *.txt
