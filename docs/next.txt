@@ -1,0 +1,9 @@
+Las siguientes son las ideas (no directamente relaccionadas a los proyectos) que podría implementar:
+
+1. Una sección de scripts/python decorators para tareas simples o repetitivas:
+    * Decorators:
+        - Time the runtime of a function
+    * Scripts:
+        - Organize files in folders based on their extension
+        - Find & remove empty folders
+        - Clean cache (bash)

@@ -15,7 +15,7 @@ nav:
           - DnD Spell Table: projects/spells.md
 
 exclude_docs: |
-  requirements.txt
+  *.txt
 
 theme:
   name: material
