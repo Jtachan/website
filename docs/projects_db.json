@@ -11,14 +11,14 @@
     ],
     "post": "",
     "date": "2024.03.20",
-    "update": "2026.02.12",
+    "last_commit": "2026.02.12",
     "status": "maintained"
   },
   {
     "name": "DnD Spells Table (ES)",
     "lang": [
-      "Python",
       "JavaScript",
+      "Python",
       "HTML5",
       "CSS3"
     ],
@@ -30,7 +30,7 @@
     "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
     "post": "",
     "date": "2025.11.16",
-    "update": "2026.02.04",
+    "last_commit": "2026.02.04",
     "status": "maintained"
   },
   {
@@ -45,7 +45,7 @@
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
     "post": "",
     "date": "2024.11.19",
-    "update": "2024.11.24",
+    "last_commit": "2024.11.24",
     "status": "finished"
   },
   {
@@ -60,7 +60,7 @@
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
     "post": "",
     "date": "2024.02.16",
-    "update": "2024.11.24",
+    "last_commit": "2024.11.24",
     "status": "finished"
   },
   {
@@ -75,7 +75,7 @@
     "repo": "https://github.com/Jtachan/Rubik_sim",
     "post": "",
     "date": "2023.09.01",
-    "update": "2024.02.24",
+    "last_commit": "2024.02.24",
     "status": "finished"
   },
   {
@@ -90,7 +90,7 @@
     "repo": "https://github.com/Jtachan/enigma_cipher",
     "post": "",
     "date": "2023.07.09",
-    "update": "2023.09.03",
+    "last_commit": "2023.09.03",
     "status": "finished"
   }
 ]

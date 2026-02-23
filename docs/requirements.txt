@@ -1,3 +1,4 @@
 mkdocs<2
 mkdocs-material
+mkdocs-macros-plugin
 ruff

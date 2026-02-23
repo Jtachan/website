@@ -11,10 +11,18 @@ Everything you can find here is OpenSource, where I explain the full process for
     <img alt="Most used languages: Python, Rust, C++, Javascript, HTML" src="https://raw.githubusercontent.com/Jtachan/Jtachan/refs/heads/main/profile/top_langs.svg"/>
 </div>
 
-## Project index table
+[//]: # (These are the last 5 personal projects where I have commited and pushed changes &#40;not considering this website&#41;.)
 
-There is a table of all the projects I have worked on at the past.
-Some of them are fully finished (without further scope of increasing the project), while others I still maintain or are on-going projects.
+[//]: # ()
+[//]: # (| Name | Main Language | Description | Last commit &#40;YYYY.MM.DD&#41; |)
+
+[//]: # (| :--- | :--- | :--- | :--- |)
+
+[//]: # ({% for item in items[:5] -%})
+
+[//]: # (| {{ item.name }} | {{ item.lang[0] }} | {{ item.descr }} | {{ item.last_commit }} |)
+
+[//]: # ({% endfor %})
 
 !!! tip
     If there is any icon you don't recognize, place the mouse cursor on top of it, and it will display the name of the language or framework.

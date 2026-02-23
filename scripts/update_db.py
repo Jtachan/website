@@ -13,7 +13,7 @@ BASE_ENTRIES = {
     "repo": "",  # Link to the repository
     "post": "",  # Link to the post
     "date": "",  # Start date of the project finalization in ISO format YYYY.MM.DD
-    "update": "",  # ISO date of the last commit at 'main'/'master'
+    "last_commit": "",  # ISO date of the last commit at 'main'/'master'
     "status": "",  # Either ongoing, maintained or finished
 }
 PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
@@ -37,9 +37,11 @@ def check_db_entries():
                 entry[key] = val
 
         repo_provided = entry["repo"] != ""
-        last_update_fetched = entry["status"] == "finished" and entry["update"] != ""
-        if repo_provided and not last_update_fetched:
-            entry["update"] = get_repo_dates(entry["repo"])
+        last_commit_fetched = (
+            entry["status"] == "finished" and entry["last_commit"] != ""
+        )
+        if repo_provided and not last_commit_fetched:
+            entry["last_commit"] = get_repo_dates(entry["repo"])
 
     with open(PROJECTS_DB_PATH, "w", encoding="utf-8") as db:
         json.dump(entries, db, indent=2)
@@ -61,8 +63,8 @@ def get_repo_dates(repo_link: str) -> tuple[str, str]:
     last_response = requests.get(commits_api, params={"per_page": 1})
     raw_date = last_response.json()[0]["commit"]["committer"]["date"]
 
-    newest_update_date = datetime.strptime(raw_date, "%Y-%m-%dT%H:%M:%SZ")
-    return newest_update_date.strftime("%Y.%m.%d")
+    latest_commit_date = datetime.strptime(raw_date, "%Y-%m-%dT%H:%M:%SZ")
+    return latest_commit_date.strftime("%Y.%m.%d")
 
 
 def sort_db(sort_by_update: bool = False):
@@ -70,7 +72,7 @@ def sort_db(sort_by_update: bool = False):
     with open(PROJECTS_DB_PATH, "r", encoding="utf-8") as db:
         entries = json.load(db)
 
-    key = "update" if sort_by_update else "date"
+    key = "last_commit" if sort_by_update else "date"
     # All entries have their date in ISO format.
     entries = sorted(
         entries,
