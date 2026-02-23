@@ -5,10 +5,10 @@ I have no strict date to do them, and I do not consider them as my own property,
 
 | Project Name | Main language | Description |
 | --- | --- | --- |
-| **Gitr** | Rust | Basic `git` tool coded with Rust. This should include only the basic git commands (pull, push, branch, config, ...) that any user could use on ther everyday use. There is room also to include "experimental" features (fetch commit data, fetch specific commit). |
+| **Gitr** | Rust | Basic `git` tool coded with Rust. This should include only the basic git commands (pull, push, branch, config, ...) that any user could use on their everyday use. There is room also to include "experimental" features (fetch commit data, fetch specific commit). |
 | **DB Manager** | Python, SQL Alchemy | An GUI that allows accessing and modifying (add/remove entries) through SQL commands. These commands should be hidden for the user. |
 | **8-bit Chip** (rename) | Rust | Basic emulation of an 8-bit chipset (old GameBoy generation) coded with Rust. This project provides a lot of understanding about use of registers and memory. |
-| **Password Manager** | Rust | A password manager that stores and generates passwords to log into accounts. All the passwords should be sotored locally in an encrypted file. |
+| **Password Manager** | Rust | A password manager that stores and generates passwords to log into accounts. All the passwords should be stored locally in an encrypted file. |
 | **Board puzzle generator** | Python | Algorithms to generate puzzles at any chess-like board. The puzzles to support should be 'Sudoku', 'Binario', 'Queens', 'Nonograms' and 'Connecting pipes'. |
 | **Rusty logger** | Rust | A multi-threaded .log parser and analyzer to be used only as a CLI tool. It could support multiple log formats (through config file), allow users to search patterns and produce new reports. | 
 | **QR Generator** | Rust | A simple QR generator trying to use as least 3rd-parties packages as possible. The QR could be exported as SVG or PNG. |
