@@ -51,7 +51,7 @@ extra_javascript:
   - https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Code+Pro&display=swap
 
 extra_css:
-  - stylesheet/project_table.css
+  - stylesheet/tables.css
   - stylesheet/theme.css
 
 markdown_extensions:
