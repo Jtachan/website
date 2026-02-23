@@ -7,3 +7,19 @@ Las siguientes son las ideas (no directamente relacionadas con los proyectos) qu
         - Organize files in folders based on their extension
         - Find & remove empty folders
         - Clean cache (bash)
+
+2. LeetCode:
+    Using my existing repo "https://github.com/Jtachan/leetcode_training" upload to the website:
+        - Document with explanations and drawings of those solved problems.
+        - Script to display my code in the available solved languages.
+
+    About the script, this is possible for mkdocs-material:
+    a) First include the extension 'pymdownx.tabbed'
+    b) Then, at the markdown file, write:
+
+        === "Lang"
+            ```lang
+            code
+            ```
+       IMPORTANT: Write "Lang" and not just Lang (without '"') or it will fail.
+    c) It might be possible to generate some logic with the mkdocs-macros to fetch the code automatically
