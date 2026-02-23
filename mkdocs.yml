@@ -5,7 +5,9 @@ repo_url: "https://github.com/Jtachan/website/"
 repo_name: "Jtachan/website"
 
 nav:
-  - Home: index.md
+  - Home:
+      - Home: index.md
+#      - About: jgo/about.md
   - Projects:
       - Index: proj_index.md
       - Next up: projects/nextup.md
