@@ -1,5 +1,20 @@
 [
   {
+    "name": "PyBackport",
+    "lang": [
+      "Python"
+    ],
+    "descr": "Backporting Python objects from newer to older Python versions.",
+    "repo": "https://github.com/Jtachan/PyBackport",
+    "tech": [
+      "MkDocs"
+    ],
+    "post": "",
+    "date": "2024.03.20",
+    "update": "2026.02.12",
+    "status": "maintained"
+  },
+  {
     "name": "DnD Spells Table (ES)",
     "lang": [
       "Python",
@@ -15,7 +30,8 @@
     "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
     "post": "",
     "date": "2025.11.16",
-    "update": "2026.02.04"
+    "update": "2026.02.04",
+    "status": "maintained"
   },
   {
     "name": "PyQt-Sudoku",
@@ -29,21 +45,8 @@
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
     "post": "",
     "date": "2024.11.19",
-    "update": "2024.11.24"
-  },
-  {
-    "name": "PyBackport",
-    "lang": [
-      "Python"
-    ],
-    "descr": "Backporting Python objects from newer to older Python versions.",
-    "repo": "https://github.com/Jtachan/PyBackport",
-    "tech": [
-      "MkDocs"
-    ],
-    "post": "",
-    "date": "2024.03.20",
-    "update": "2026.02.12"
+    "update": "2024.11.24",
+    "status": "finished"
   },
   {
     "name": "Conway's Game of Life",
@@ -57,7 +60,8 @@
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
     "post": "",
     "date": "2024.02.16",
-    "update": "2024.11.24"
+    "update": "2024.11.24",
+    "status": "finished"
   },
   {
     "name": "Rubik's Simulator",
@@ -71,7 +75,8 @@
     "repo": "https://github.com/Jtachan/Rubik_sim",
     "post": "",
     "date": "2023.09.01",
-    "update": "2024.02.24"
+    "update": "2024.02.24",
+    "status": "finished"
   },
   {
     "name": "Enigma Cipher",
@@ -85,6 +90,7 @@
     "repo": "https://github.com/Jtachan/enigma_cipher",
     "post": "",
     "date": "2023.07.09",
-    "update": "2023.09.03"
+    "update": "2023.09.03",
+    "status": "finished"
   }
 ]

@@ -14,10 +14,9 @@ BASE_ENTRIES = {
     "post": "",  # Link to the post
     "date": "",  # Start date of the project finalization in ISO format YYYY.MM.DD
     "update": "",  # ISO date of the last commit at 'main'/'master'
+    "status": "",  # Either ongoing, maintained or finished
 }
 PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
-
-FETCH_LAST_COMMIT = False
 
 
 def check_db_entries():
@@ -37,7 +36,9 @@ def check_db_entries():
             if key not in entry:
                 entry[key] = val
 
-        if FETCH_LAST_COMMIT and entry["repo"] != "":
+        repo_provided = entry["repo"] != ""
+        last_update_fetched = entry["status"] == "finished" and entry["update"] != ""
+        if repo_provided and not last_update_fetched:
             entry["update"] = get_repo_dates(entry["repo"])
 
     with open(PROJECTS_DB_PATH, "w", encoding="utf-8") as db:
@@ -60,21 +61,20 @@ def get_repo_dates(repo_link: str) -> tuple[str, str]:
     last_response = requests.get(commits_api, params={"per_page": 1})
     raw_date = last_response.json()[0]["commit"]["committer"]["date"]
 
-    newest_date = datetime.strptime(raw_date, "%Y-%m-%dT%H:%M:%SZ")
-    return newest_date.strftime("%Y.%m.%d")
+    newest_update_date = datetime.strptime(raw_date, "%Y-%m-%dT%H:%M:%SZ")
+    return newest_update_date.strftime("%Y.%m.%d")
 
 
-def sort_db():
+def sort_db(sort_by_update: bool = False):
     """Sorting of the database based on the date (newer first)."""
     with open(PROJECTS_DB_PATH, "r", encoding="utf-8") as db:
         entries = json.load(db)
 
+    key = "update" if sort_by_update else "date"
     # All entries have their date in ISO format.
     entries = sorted(
         entries,
-        key=lambda x: (
-            datetime.strptime(x["date"], "%Y.%m.%d") if x["date"] else datetime.min
-        ),
+        key=lambda x: datetime.strptime(x[key], "%Y.%m.%d"),
         reverse=True,
     )
 
@@ -84,4 +84,4 @@ def sort_db():
 
 if __name__ == "__main__":
     check_db_entries()
-    sort_db()
+    sort_db(True)
