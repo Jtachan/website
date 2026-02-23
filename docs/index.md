@@ -10,11 +10,12 @@ I work as an algorithm engineer, but on my free time I develop OpenSource code t
 
 These are the last 5 personal projects where I have commited and pushed changes (not considering this website).
 
-| Name |  Description | Last commit (YYYY.MM.DD) |
-| :--- |  :--- | :--- |
-{% for item in items[:5] -%}
-| {{ item.name }} | {{ item.descr }} | {{ item.last_commit }} |
-{% endfor %}
+<table>
+    <tr>{{ get_table_headers() }}</tr>
+    {% for project in projects -%}
+        {{ load_table_row(project) }}
+    {% endfor %}
+</table>
 
 !!! Note
     See the [**index table**](proj_index.md) to visualize all my personal projects.
