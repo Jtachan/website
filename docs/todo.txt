@@ -1,4 +1,4 @@
-Las siguientes son las ideas (no directamente relaccionadas a los proyectos) que podría implementar:
+Las siguientes son las ideas (no directamente relacionadas con los proyectos) que podría implementar:
 
 1. Una sección de scripts/python decorators para tareas simples o repetitivas:
     * Decorators:

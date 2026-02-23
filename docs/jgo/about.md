@@ -1,4 +1,7 @@
 # About me
 
-I develop Python (primary language) and Rust (secondary language) tools and libraries.
-Everything you can find here is OpenSource, where I explain the full process for anyone to be able to understand and recreate the projects.
+My name is Jaime Gonzalez, and as a **researcher and algorithm engineer**, my main goal is always to _understand_ the logic of anything.
+Any software I develop I use Python (primary language) or Rust (secondary language).
+
+!!! warning
+    This section is still a WIP

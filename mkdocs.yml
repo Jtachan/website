@@ -7,7 +7,7 @@ repo_name: "Jtachan/website"
 nav:
   - Home:
       - Home: index.md
-#      - About: jgo/about.md
+      - About: jgo/about.md
   - Projects:
       - Index: proj_index.md
       - Next up: projects/nextup.md
