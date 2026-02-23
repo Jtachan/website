@@ -8,24 +8,13 @@ I work as an algorithm engineer, but on my free time I develop OpenSource code t
     <img alt="Most used languages: Python, Rust, C++, Javascript, HTML" src="https://raw.githubusercontent.com/Jtachan/Jtachan/refs/heads/main/profile/top_langs.svg"/>
 </div>
 
-[//]: # (These are the last 5 personal projects where I have commited and pushed changes &#40;not considering this website&#41;.)
+These are the last 5 personal projects where I have commited and pushed changes (not considering this website).
 
-[//]: # ()
-[//]: # (| Name | Main Language | Description | Last commit &#40;YYYY.MM.DD&#41; |)
-
-[//]: # (| :--- | :--- | :--- | :--- |)
-
-[//]: # ({% for item in items[:5] -%})
-
-[//]: # (| {{ item.name }} | {{ item.lang[0] }} | {{ item.descr }} | {{ item.last_commit }} |)
-
-[//]: # ({% endfor %})
-
-!!! tip
-    If there is any icon you don't recognize, place the mouse cursor on top of it, and it will display the name of the language or framework.
-
-<div id="project-table"></div>
+| Name |  Description | Last commit (YYYY.MM.DD) |
+| :--- |  :--- | :--- |
+{% for item in items[:5] -%}
+| {{ item.name }} | {{ item.descr }} | {{ item.last_commit }} |
+{% endfor %}
 
 !!! Note
-    All projects are currently organized by creation date (newer first).
-    I am working on sorting options not for only creation date, but also to display the ones with the last commits first.
+    See the [**index table**](proj_index.md) to visualize all my personal projects.
