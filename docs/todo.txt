@@ -23,3 +23,5 @@ Las siguientes son las ideas (no directamente relacionadas con los proyectos) qu
             ```
        IMPORTANT: Write "Lang" and not just Lang (without '"') or it will fail.
     c) It might be possible to generate some logic with the mkdocs-macros to fetch the code automatically
+
+3. CV as JSON

@@ -11,12 +11,13 @@ BASE_ENTRIES = {
     "tech": [""],  # All used frameworks (most relevant first)
     "descr": "",  # Basic project description
     "repo": "",  # Link to the repository
-    "post": "",  # Link to the post
-    "date": "",  # Start date of the project finalization in ISO format YYYY.MM.DD
+    "md-link": "",  # Link to the post (markdown file)
+    "created": "",  # Start date of the project finalization in ISO format YYYY.MM.DD
     "last_commit": "",  # ISO date of the last commit at 'main'/'master'
     "status": "",  # Either ongoing, maintained or finished
 }
 PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
+IGNORE_FETCH_COMMIT = False
 
 
 def check_db_entries():
@@ -40,7 +41,7 @@ def check_db_entries():
         last_commit_fetched = (
             entry["status"] == "finished" and entry["last_commit"] != ""
         )
-        if repo_provided and not last_commit_fetched:
+        if not IGNORE_FETCH_COMMIT and repo_provided and not last_commit_fetched:
             entry["last_commit"] = get_repo_dates(entry["repo"])
 
     with open(PROJECTS_DB_PATH, "w", encoding="utf-8") as db:
@@ -72,7 +73,7 @@ def sort_db(sort_by_update: bool = False):
     with open(PROJECTS_DB_PATH, "r", encoding="utf-8") as db:
         entries = json.load(db)
 
-    key = "last_commit" if sort_by_update else "date"
+    key = "last_commit" if sort_by_update else "created"
     # All entries have their date in ISO format.
     entries = sorted(
         entries,

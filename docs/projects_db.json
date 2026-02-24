@@ -13,10 +13,26 @@
     ],
     "descr": "Interactive and quick table for easy and fast access to a small dataset.",
     "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
-    "post": "",
-    "date": "2025.11.16",
+    "md-link": "",
+    "created": "2025.11.16",
     "last_commit": "2026.02.04",
     "status": "maintained"
+  },
+  {
+    "name": "Finance Tracker",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "Bokeh",
+      "SQLite"
+    ],
+    "descr": "Application to track expenses and get statistical plots over these.",
+    "repo": "https://github.com/Jtachan/FinanceTracker",
+    "md-link": "",
+    "created": "2025.02.20",
+    "last_commit": "2026.02.24",
+    "status": "finished"
   },
   {
     "name": "PyQt-Sudoku",
@@ -28,8 +44,8 @@
     ],
     "descr": "Sudoku GUI generated with Python",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
-    "post": "",
-    "date": "2024.11.19",
+    "md-link": "",
+    "created": "2024.11.19",
     "last_commit": "2024.11.24",
     "status": "finished"
   },
@@ -43,8 +59,8 @@
     "tech": [
       "MkDocs"
     ],
-    "post": "",
-    "date": "2024.03.20",
+    "md-link": "",
+    "created": "2024.03.20",
     "last_commit": "2026.02.12",
     "status": "maintained"
   },
@@ -58,8 +74,8 @@
     ],
     "descr": "Simulation generated to experiment about other algorithms.",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
-    "post": "",
-    "date": "2024.02.16",
+    "md-link": "",
+    "created": "2024.02.16",
     "last_commit": "2024.11.24",
     "status": "finished"
   },
@@ -73,8 +89,8 @@
     ],
     "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
     "repo": "https://github.com/Jtachan/Rubik_sim",
-    "post": "",
-    "date": "2023.09.01",
+    "md-link": "",
+    "created": "2023.09.01",
     "last_commit": "2024.02.24",
     "status": "finished"
   },
@@ -88,8 +104,8 @@
     ],
     "descr": "Cipher coded to mimic the enigma machine structure, but allowing customization.",
     "repo": "https://github.com/Jtachan/enigma_cipher",
-    "post": "",
-    "date": "2023.07.09",
+    "md-link": "",
+    "created": "2023.07.09",
     "last_commit": "2023.09.03",
     "status": "finished"
   }
