@@ -6,10 +6,17 @@ You can search any project either:
 - Using the left TOC, where all reports are sorted by the main used coding language.
 - By using the table, where you can apply filters or sort by columns. Click directly on the row of the project to jump to the report.
 
+<details>
+<summary><b>Index project table</b></summary>
+
 <div id="project-table"></div>
 
 !!! tip
     If there is any icon you don't recognize, place the mouse cursor on top of it, and it will display the name of the language or framework.
+
+!!! note
+    These are not all my repositories, but the projects that I find interesting to share the logic they have behind.
+</details>
 
 ## About each project report
 
