@@ -22,7 +22,7 @@ function getLangIcon(lang) {
         return document.createTextNode("");
     }
 
-    const iconPath = `../assets/code-icons/${lang.toLowerCase()}.svg`;
+    const iconPath = `https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/${lang.toLowerCase()}.svg`;
 
     const img = document.createElement('img');
     img.src = iconPath;
