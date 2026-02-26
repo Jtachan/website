@@ -1,8 +1,16 @@
 # PyBackport: Backporting from newer Python releases
 
-| GitHub Repo | Main Language |  Status |
-| --- | --- | --- |
-| [PyBackport](https://github.com/Jtachan/PyBackport) | Python | <span style="color: blue">Maintained</span> |
+
+<table>
+    <tr><th>GitHub Repo</th><th>Main Language</th><th>Status</th></tr>
+    <tr>
+        <td><a href="https://github.com/Jtachan/PyBackport">PyBackport</a></td>
+        <td align="center">
+            <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/python.svg" alt="Python" title="Python" width="30">
+        </td>
+        <td><span style="color: cyan">Maintained</span></td>
+    </tr>
+</table>
 
 ![tests_badge](https://github.com/Jtachan/PyBackport/actions/workflows/CI.yml/badge.svg)
 [![PyPI Version](https://img.shields.io/pypi/v/PyBackport)](https://pypi.org/project/PyBackport/)
@@ -40,7 +48,7 @@ I coded some backports for both modules `enum` and `bultins` (only `str` and `di
 Right now I don't have any further need in expanding the package, but it is not abandoned.
 I will continue developing the package only in the case some specific backport is required.
 
-## Project's behavior
+## Project road
 
 `PyBackport` imports only if required the backported classes.
 In other words, if someone would import `StrEnum` from the library with Python 3.11 or a higher release, the original code of `StrEnum` (directly from the python modules) is imported.
@@ -79,9 +87,9 @@ False
 TypeError: '<' not supported between instances of 'str' and 'int'
 ````
 
-## Backports
+### Backports
 
-### Enums
+#### Enums
 
 The biggest difference to backport was not that `StrEnum` was integrated, but rather that many enums were invoking the member's value for calls and string representations.
 This affected other enum types, like `IntEnum`, by now inheriting from `ReprEnum`, a new class which would set only the `__repr__` call to enum.
@@ -102,7 +110,7 @@ class ReprEnum(enum.Enum):
         return self.value.__format__(format_spec)
 ```
 
-### Builtins
+#### Builtins
 
 Backporting builtins is somewhat controversial in Python, as it requires to:
 

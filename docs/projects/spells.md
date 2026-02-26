@@ -1,9 +1,15 @@
 # DnD Spells Interactive Table
 
-| GitHub Repo | Main Language | Status |
-| --- | --- | --- |
-| [DnD Spells (ES)](https://github.com/Jtachan/DnD-5.5-Spells-ES) | JS, CSS | <span style="color: blue">Maintained</span> |
-
+<table>
+    <tr><th>GitHub Repo</th><th>Main Language</th><th>Status</th></tr>
+    <tr>
+        <td><a href="https://github.com/Jtachan/DnD-5.5-Spells-ES">DnD Spells (ES)</a></td>
+        <td align="center">
+            <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/javascript.svg" alt="JS" title="JavaScript" width="30">
+        </td>
+        <td><span style="color: cyan">Maintained</span></td>
+    </tr>
+</table>
 
 This project wasn't my first project where I needed to create an HTML with simple CSS, 
 but it was my first project where I chose to code in JavaScript.
@@ -21,7 +27,8 @@ With that purpose, I created a table that allows:
 
 ![Animation displaying the table, searching in real time and opening a spell](../assets/pr-gif/spells.gif)
 
-> [Try the table](https://jtachan.github.io/DnD-5.5-Spells-ES/)
+!!! hint
+    [Try the table](https://jtachan.github.io/DnD-5.5-Spells-ES/)
 
 !!! note
     At the page, all attributions of every spell released at the SRD (_System Reference Document_) are given to _Wizards of the Coast_ under the terms of CC-BY-4.0.
@@ -39,12 +46,27 @@ Thus, I set my mind to create something:
 - Quick and clear to use
 - Available from everywhere
 
-I knew this was something achievable with a _JavaScript_ (JS) script and basic CSS, although at this point I had never coded anything really in JS.
-That was my second motivation: I could learn something new.
+## Project road
 
-The only problem with the tool is that almost all data of each spell was obtained through AI:
-I sent the LLM client a picture or a text of the spell and ask to extract the data in a very specific structure.
-However, we all know that AI hallucinates quite a lot and that introduced errors in the data.
+### Defining database
 
-Even though I carefully checked as many spells as possible, I know I cannot find all the possible errors.
-That is the reason why I also integrated a **'report issue' button**, which allows to anyone to write me a mail specifying the error they found. 
+The structure of the database was one of the main pillars for the project.
+Creating a bad structure would resolve into expending a lot of time and effort at late stages of the project.
+
+For that reason, I focused on finding all the general and important fields that people usually look at when reading a spell:
+
+- **Basic fields**: Spell name, classes that can learn it, school of magic, components and spell level.
+- **Numeric fields**: Reach when casting the spell, how long it remains, how long it takes to cast.
+- **Useful 'flag' fields**: Can it be cast as a ritual? Does it require concentration?
+- **Hidden information** (at the description): If the target needs to be visible, if the spell needs an attack throw.
+
+Those named fields are general for all spells, no matter its effects.
+Some other spells could use of extra information like '_damage_', but I decided to leave all this non-general information as the description of the spell.
+
+### Extracting data from the original text
+
+### Imperial and metric systems
+
+### User support
+
+### Logic for the table

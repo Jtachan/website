@@ -20,15 +20,21 @@ Within each project, the fist thing you will encounter is a table like this:
 
 | GitHub Repo | Main Language | Status |
 | --- | --- | --- |
-| GH Repo link | Python, Rust, Js, etc | <span style="color: blue">Maintained</span> / <span style="color: green">Finished</span> / <span style="color: red">Ongoing</span> |
+| GH Repo link | Python, Rust, Js, etc | <span style="color: cyan">Maintained</span> / <span style="color: green">Finished</span> / <span style="color: red">Ongoing</span> |
 
 Where the status indicates:
 
 <ul>
-    <li><b><span style="color: blue">Maintained</span></b>: The project is at a finished/released status, but I am still releasing new features or fixes if required.</li>
+    <li><b><span style="color: cyan">Maintained</span></b>: The project is at a finished/released status, but I am still releasing new features or fixes if required.</li>
     <li><b><span style="color: green">Finished</span></b>: The project is finished, and it should not expect new pushes.</li>
     <li><b><span style="color: red">Ongoing</span></b>: The project is unfinished. It's project documentation page will show basic info about it and a stage where the project lies at the moment</li>
 </ul>
+
+Then, each project report will display **three main sections**:
+
+- **Summary**: Vertical overview of the project with a GIF (if applies) displaying how the project works.
+- **Motivation**: The reason why I chose to code any project.
+- **Project road**: Here I describe how I thought and solve the problems through the development. There might be multiple subsections for organisation purposes.
 
 ## Further project ideas
 
