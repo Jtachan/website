@@ -50,12 +50,12 @@ theme:
     code: Source Code Pro
 
 extra_javascript:
-  - js/project_table.js
+  - assets/js/project_table.js
   - https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Code+Pro&display=swap
 
 extra_css:
-  - stylesheet/tables.css
-  - stylesheet/theme.css
+  - assets/stylesheet/tables.css
+  - assets/stylesheet/theme.css
 
 markdown_extensions:
   - admonition  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admonition#supported-types
