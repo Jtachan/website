@@ -1,4 +1,4 @@
-# Vehicle Model Predictor with 6-DoF (VMP)
+# Vehicle Model Predictor with 6-DoF
 This was my Final **Bachelor's Degree Project** at the University of Alcalá de Henares.
 In it, at the last page, it's all the external links and bibliography I used for research.
 
@@ -177,6 +177,7 @@ the road is considered in good conditions, its value will be considered constant
 $$
 \omega_{n} = \sqrt{\frac{K}{m_{s}}}
 $$
+
 $$
 D = 2 \omega_{n} m_{s} \xi
 $$
@@ -226,9 +227,11 @@ By knowing $\beta$ it is known $\gamma$ and the differences at velocity for each
 $$
 \frac{dX}{dt} = V * cos(\psi + \beta)
 $$
+
 $$
 \frac{dY}{dt} = V * sin(\psi + \beta)
 $$
+
 $$
 \frac{d\psi}{dt} = V * \frac{sin\beta}{l_{r}}
 $$
@@ -278,7 +281,11 @@ By doing so, the following is the equation for a side-car, at this case, the lef
 At it is also taking the approximation of $\tan(\alpha) \approx \alpha$ for very small angles.
 
 $$
-(I_{y} + m_{s} * d_{pitch}^{2}) * \frac{d^{2}}{dt^{2}} * \phi = (F_{x1} + F_{x3}) * h_{PC} - F_{c1} * l_{f} + F_{c3} * l_{r} + m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+\begin{align}
+(I_{y} + m_{s} * d_{pitch}^{2}) &* \frac{d^{2}\phi}{dt^{2}} = \\
+&(F_{x1} + F_{x3}) * h_{PC} - F_{c1} * l_{f} + F_{c3} * l_{r} \\
+&+ m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+\end{align}
 $$
 
 With that analysis it is obtained the equation for half vehicle. 
@@ -286,7 +293,11 @@ The advantage for the pitch, as mentioned when the CG's position was being defin
 For it, the full equation, considering both sides of the vehicle, is the following:
 
 $$
-(I_{y} + m_{s} * d_{pitch}^{2}) * \frac{d^{2}}{dt^{2}} * \phi = \alpha \sum F_{x} * h_{PC} - (F_{c1} + F_{c2}) * l_{f} + (F_{c3} + F_{c4}) * l_{r} + m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+\begin{align}
+(I_{y} + m_{s} * d_{pitch}^{2}) &* \frac{d^{2}\phi}{dt^{2}} = \\
+&\alpha \sum F_{x} * h_{PC} - (F_{c1} + F_{c2}) * l_{f} + (F_{c3} + F_{c4}) * l_{r} \\
+&+ m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+\end{align}
 $$
 
 ### Roll-model
@@ -306,5 +317,9 @@ In other words, it will be supposed that the axis that holds RC is parallel to t
 With it and following the previous analysis steps, the equation for the variation of the roll can be obtained as:
 
 $$
-(I_{x} + m_{s} * d_{roll}^{2}) * \frac{d^{2}}{dt^{2}} * \theta = \alpha \sum F_{y} * h_{RC} + (F_{c1} - F_{c2}) * \frac{t_{f}}{2} + (F_{c3} - F_{c4}) * \frac{t_{r}}{2} + m_{s} * a_{y} * d_{roll} + m_{s} * g * d_{roll} * \theta
+\begin{align}
+(I_{x} + m_{s} * d_{roll}^{2}) &* \frac{d^{2}\theta}{dt^{2}} = \\
+&\alpha \sum F_{y} * h_{RC} + (F_{c1} - F_{c2}) * \frac{t_{f}}{2} + (F_{c3} - F_{c4}) * \frac{t_{r}}{2} \\
+&+ m_{s} * a_{y} * d_{roll} + m_{s} * g * d_{roll} * \theta
+\end{align}
 $$
