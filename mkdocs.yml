@@ -9,14 +9,14 @@ nav:
       - Home: index.md
       - Know me better: jgo/about.md
   - Projects:
-      - Index: proj_index.md
-      - Next up: projects/nextup.md
+      - Index: projects/index.md
+      - Next projects (ideas): projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
       - JavaScript:
           - DnD Spell Table: projects/spells.md
   - Contributions:
-      - Index: contrib_index.md
+      - Index: contributions/index.md
       - dsiUnits: contributions/dsi_units.md
   - Publications:
       - Index: publications/index.md

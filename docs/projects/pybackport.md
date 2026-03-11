@@ -8,7 +8,7 @@
         <td align="center">
             <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/python.svg" alt="Python" title="Python" width="30">
         </td>
-        <td><span style="color: cyan">Maintained</span></td>
+        <td><span style="color: lightblue">Maintained</span></td>
     </tr>
 </table>
 
@@ -18,7 +18,6 @@
 [![MIT License](https://img.shields.io/github/license/Jtachan/PyBackport)](https://github.com/Jtachan/PyBackport/blob/master/LICENSE)
 [![PyPI monthly downloads](https://img.shields.io/pypi/dm/PyBackport)](https://pypi.org/project/PyBackport/) 
 [![Docs](https://img.shields.io/badge/Read_the_docs-blue)](https://Jtachan.github.io/PyBackport/)
-[![GH stars](https://img.shields.io/github/stars/Jtachan/PyBackport)](https://github.com/Jtachan/PyBackport/) 
 
 The goal of `PyBackport` is to enable the use of new classes and functionalities from newer into older python releases.
 While the use of newer python releases is always recommended, there are software releases which constrains are to support old python releases.

@@ -7,7 +7,7 @@
         <td align="center">
             <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/javascript.svg" alt="JS" title="JavaScript" width="30">
         </td>
-        <td><span style="color: cyan">Maintained</span></td>
+        <td><span style="color: lightblue">Maintained</span></td>
     </tr>
 </table>
 
