@@ -1,5 +1,6 @@
 # DnD Spells Interactive Table
 
+<div style="display: flex; justify-content: center">
 <table>
     <tr><th>GitHub Repo</th><th>Main Language</th><th>Status</th></tr>
     <tr>
@@ -7,9 +8,10 @@
         <td align="center">
             <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/javascript.svg" alt="JS" title="JavaScript" width="30">
         </td>
-        <td><span style="color: lightblue">Maintained</span></td>
+        <td><span style="color: deepskyblue">Maintained</span></td>
     </tr>
 </table>
+</div>
 
 This project wasn't my first project where I needed to create an HTML with simple CSS, 
 but it was my first project where I chose to code in JavaScript.

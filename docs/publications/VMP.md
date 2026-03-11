@@ -6,7 +6,7 @@ The **motivation** for the research is to find a mathematically accurate vehicle
 With it, the model could help at autonomous driving applications.
 Within the main idea, it was desired to implement the model at an odometry application to improve the efficiency of the *Unscented Kalman Filter* (UKF).
 
-<div align="center">
+<div style="display: flex; justify-content: center">
     <img src="../../assets/images/vmp/full_vehicle.png" width=500 alt="vehicle_model">
 </div>
 
@@ -21,7 +21,7 @@ The first step was to set all the signals and variables that the model would nee
     - Position of the steering wheel: $\lambda$
     - Vehicle speed: $V$
 
-<div align="center">
+<div style="display: flex; justify-content: center">
   <img src="../../assets/images/vmp/rpy.png" width=500 alt="roll_pitch_yaw">
 </div>  
 
@@ -42,7 +42,7 @@ As specified before, one of the control signals is the steering wheel position (
 However, this data has to be transformed into a front tyre rotation to be used at the model.
 By following the Ackerman turning model, the rotation of the tyre is greater at the inner wheel than the outer.
 
-<div align="center">
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/Ackerman.png" alt="ackerman" width=500>
 </div>
 
@@ -51,7 +51,7 @@ The middle tyre does not exist physically, but it will be used as an approximati
 For the ratio calculation, a Citröen C4 is used as the test model for all physical measurements.
 Thus, the first measurement was for the tyres rotation, obtaining the following results:
 
-<div align="center">
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/tyres_rotation.png" alt="tyres_rotation" width=650>
 </div>
 
@@ -119,7 +119,7 @@ A vehicle experiences this effect because it has a damper system joining each ty
 There are also two anti-roll rods: one joining the front tyres and one joining the rear tyres, but these will be neglected at the model.
 Thus, the last part to characterize of the vehicle is the system of the dampers.
 
-<div align="center">
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/dumper.png" alt="dumper" width=250>
 </div>
 
@@ -195,7 +195,7 @@ With a 2D analysis, this model only has 3 state variables, which represent the D
 As it can be noticed, a control signal is the rotation of the front wheel ($\delta$).
 Previously has been proven how to obtain this parameter prom the steering wheel position, so from now on all equations will show only the $\delta$ parameter.
 
-<div align="center">
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/bicycle.png" alt="bicycle" width=500>
 </div>
 
@@ -272,7 +272,7 @@ These half-models combined create a full vehicle model that predicts the increme
 To calculate how the pitch evolves, a side-vehicle model has to be analyzed. 
 Within it, the vehicle rotates around a Pitch Center point ($PC$), which is not at the same position as the CG.
 
-<div align="center">
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/side_car.png" alt="side_car" width=600>
 </div>
 
@@ -308,7 +308,7 @@ This affects to:
   - The dampers characteristics
   - The distance to the Roll Center (RC), due its axis is tilted and not parallel to the ground
 
-<div align="center">
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/front_car.png" alt="front_car" width=550>
 </div>
 

@@ -1,6 +1,6 @@
 # PyBackport: Backporting from newer Python releases
 
-
+<div style="display: flex; justify-content: center">
 <table>
     <tr><th>GitHub Repo</th><th>Main Language</th><th>Status</th></tr>
     <tr>
@@ -8,9 +8,10 @@
         <td align="center">
             <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/python.svg" alt="Python" title="Python" width="30">
         </td>
-        <td><span style="color: lightblue">Maintained</span></td>
+        <td><span style="color: deepskyblue">Maintained</span></td>
     </tr>
 </table>
+</div>
 
 ![tests_badge](https://github.com/Jtachan/PyBackport/actions/workflows/CI.yml/badge.svg)
 [![PyPI Version](https://img.shields.io/pypi/v/PyBackport)](https://pypi.org/project/PyBackport/)

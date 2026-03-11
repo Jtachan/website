@@ -20,12 +20,12 @@ Within each project, the fist thing you will encounter is a table like this:
 
 | GitHub Repo | Main Language | Status |
 | --- | --- | --- |
-| GH Repo link | Python, Rust, Js, etc | <span style="color: lightblue">Maintained</span> / <span style="color: green">Finished</span> / <span style="color: red">Ongoing</span> |
+| GH Repo link | Python, Rust, Js, etc | <span style="color: deepskyblue">Maintained</span> / <span style="color: green">Finished</span> / <span style="color: red">Ongoing</span> |
 
 Where the status indicates:
 
 <ul>
-    <li><b><span style="color: lightblue">Maintained</span></b>: The project is at a finished/released status, but I am still releasing new features or fixes if required.</li>
+    <li><b><span style="color: deepskyblue">Maintained</span></b>: The project is at a finished/released status, but I am still releasing new features or fixes if required.</li>
     <li><b><span style="color: green">Finished</span></b>: The project is finished, and it should not expect new pushes.</li>
     <li><b><span style="color: red">Ongoing</span></b>: The project is unfinished. It's project documentation page will show basic info about it and a stage where the project lies at the moment</li>
 </ul>
