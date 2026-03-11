@@ -18,6 +18,8 @@ nav:
   - Contributions:
       - Index: contrib_index.md
       - dsiUnits: contributions/dsi_units.md
+  - Publications:
+      - Index: publication_index.md
 
 exclude_docs: |
   *.txt
