@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Home Scripts",
+    "lang": [
+      "Python",
+      "Batch"
+    ],
+    "descr": "General scripts to run/automate small tasks or as helpers for very simple cases.",
+    "repo": "https://github.com/Jtachan/HomeScripts",
+    "md-link": "",
+    "created": "2026.02.24",
+    "last_commit": "2026.02.25",
+    "status": "maintained",
+    "tech": [
+      ""
+    ]
+  },
+  {
+    "name": "PyWrappers",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "MkDocs"
+    ],
+    "descr": "Python wrappers and decorators to use mostly for debugging purposes.",
+    "repo": "https://github.com/Jtachan/PyWrappers",
+    "created": "2026.01.21",
+    "last_commit": "2026.02.24",
+    "status": "maintained",
+    "md-link": ""
+  },
+  {
+    "name": "DnD Spells Table (ES)",
+    "lang": [
+      "JavaScript",
+      "Python",
+      "HTML5",
+      "CSS3"
+    ],
+    "tech": [
+      "JSON",
+      "GitHubActions"
+    ],
+    "descr": "Interactive and quick table for easy and fast access to a small dataset.",
+    "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
+    "md-link": "",
+    "created": "2025.11.16",
+    "last_commit": "2026.02.04",
+    "status": "maintained"
+  },
+  {
+    "name": "Finance Tracker",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "Bokeh",
+      "SQLite"
+    ],
+    "descr": "Application to track expenses and get statistical plots over these.",
+    "repo": "https://github.com/Jtachan/FinanceTracker",
+    "md-link": "",
+    "created": "2025.02.20",
+    "last_commit": "2026.02.24",
+    "status": "finished"
+  },
+  {
+    "name": "PyQt-Sudoku",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "Qt"
+    ],
+    "descr": "Sudoku GUI generated with Python",
+    "repo": "https://github.com/Jtachan/PyQt-Sudoku",
+    "md-link": "",
+    "created": "2024.11.19",
+    "last_commit": "2024.11.24",
+    "status": "finished"
+  },
+  {
+    "name": "PyBackport",
+    "lang": [
+      "Python"
+    ],
+    "descr": "Backporting Python objects from newer to older Python versions.",
+    "repo": "https://github.com/Jtachan/PyBackport",
+    "tech": [
+      "MkDocs", "PyPI"
+    ],
+    "md-link": "",
+    "created": "2024.03.20",
+    "last_commit": "2026.02.12",
+    "status": "maintained"
+  },
+  {
+    "name": "Conway's Game of Life",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "PyGame"
+    ],
+    "descr": "Simulation generated to experiment about other algorithms.",
+    "repo": "https://github.com/Jtachan/PyQt-Sudoku",
+    "md-link": "",
+    "created": "2024.02.16",
+    "last_commit": "2024.11.24",
+    "status": "finished"
+  },
+  {
+    "name": "Rubik's Simulator",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "NumPy", "PyPI"
+    ],
+    "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
+    "repo": "https://github.com/Jtachan/Rubik_sim",
+    "md-link": "",
+    "created": "2023.09.01",
+    "last_commit": "2024.02.24",
+    "status": "finished"
+  },
+  {
+    "name": "Enigma Cipher",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "MkDocs", "PyPI"
+    ],
+    "descr": "Cipher coded to mimic the enigma machine structure, but allowing customization.",
+    "repo": "https://github.com/Jtachan/enigma_cipher",
+    "md-link": "",
+    "created": "2023.07.09",
+    "last_commit": "2023.09.03",
+    "status": "finished"
+  }
+]
