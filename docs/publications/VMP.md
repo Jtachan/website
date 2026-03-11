@@ -91,11 +91,11 @@ Applying these terms to the equilibrium equation, the distance from CG to the fr
 At the next equations, $L$ represents the wheelbase of the vehicle.
 
 $$
-l_{f} = L * M_{r} / M
+l_{f} = L * \frac{M_{r}}{M}
 $$
 
 $$
-l_{r} = L * M_{f} / M = L - l_{f}
+l_{r} = L * \frac{M_{f}}{M} = L - l_{f}
 $$
 
 With the **second measurement**, $H$ is a selected height to elevate the rear part of the vehicle.
@@ -104,7 +104,7 @@ Therefore, because of the new mass distribution due to the elevation, the front 
 <br />Then the height of the CG is defined by the following mathematical relation:
 
 $$
-Z_{CG} = (M_{1} * l_{f} - M_{2} * l_{r}) / (M * \tan\Theta)
+Z_{CG} = \frac{M_{1} * l_{f} - M_{2} * l_{r}}{M * \tan\Theta}
 $$
 
 With that las equation, all coordinates of the CG are known.
@@ -166,7 +166,7 @@ The parameters are obtained by analyzing the characteristic equation from the tr
 This one has to be compared to the second order equation of a damped system.
 
 $$
-s^{2} + s * D / m_{s} + K / m_{s} = s^{2} + s * 2 \xi \omega_{n} + \omega_{n}^{2}
+s^{2} + s * \frac{D}{m_{s}} + \frac{K}{m_{s}} = s^{2} + s * 2 \xi \omega_{n} + \omega_{n}^{2}
 $$
 
 By comparing the terms all the parameters can be obtained as long as $\xi$ is defined.
@@ -175,7 +175,7 @@ However, taking in consideration the final model won't travel at fast velocities
 the road is considered in good conditions, its value will be considered constant at $0.7$.
 
 $$
-\omega_{n} = \sqrt{K / m_{s}}
+\omega_{n} = \sqrt{\frac{K}{m_{s}}}
 $$
 $$
 D = 2 \omega_{n} m_{s} \xi
@@ -218,19 +218,19 @@ Therefore, a further analysis is needed to find the derivate of the state variab
 This is done by applying trigonometry to the bicycle diagram to know $\beta$.
 
 $$
-\beta = arctan(l_{r} * \tan(\delta) / L)
+\beta = \arctan(l_{r} * \frac{\tan\delta}{L})
 $$
 
 By knowing $\beta$ it is known $\gamma$ and the differences at velocity for each of the state variables.
 
 $$
-d/dt * X = V * cos(\psi + \beta)
+\frac{dX}{dt} = V * cos(\psi + \beta)
 $$
 $$
-d/dt * Y = V * sin(\psi + \beta)
+\frac{dY}{dt} = V * sin(\psi + \beta)
 $$
 $$
-d/dt * \psi = V * sin(\beta)/l_{r}
+\frac{d\psi}{dt} = V * \frac{sin\beta}{l_{r}}
 $$
 
 ## Cinematic models
@@ -246,7 +246,7 @@ For it, they announce only certain parameters are needed:
 With these parameters, they establish the roll is a function of the lateral acceleration ($a_{y}$).
 
 $$
-\theta = f(a_{y}) = a_{y} * (m_{s} * d_{roll}) / K_{\theta}
+\theta = f(a_{y}) = a_{y} * \frac{m_{s} * d_{roll}}{K_{\theta}}
 $$
 
 With the previous statement of the vehicle travelling at low speed, 
@@ -257,7 +257,7 @@ Based on the theory of Masato Abe and W. Manning, a steady state pitch approxima
 It has the same bases as the previous model, but adapted to the pitch angle.
 
 $$
-\phi = f(a_{x}) = a_{x} * (m_{s} * d_{pitch}) / K_{\phi}
+\phi = f(a_{x}) = a_{x} * \frac{m_{s} * d_{pitch}}{K_{\phi}}
 $$
 
 ## Dynamic model for pitch and roll
@@ -278,7 +278,7 @@ By doing so, the following is the equation for a side-car, at this case, the lef
 At it is also taking the approximation of $\tan(\alpha) \approx \alpha$ for very small angles.
 
 $$
-(I_{y} + m_{s} * d_{pitch}^{2}) * d^{2}/dt^{2} * \phi = (F_{x1} + F_{x3}) * h_{PC} - F_{c1} * l_{f} + F_{c3} * l_{r} + m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+(I_{y} + m_{s} * d_{pitch}^{2}) * \frac{d^{2}}{dt^{2}} * \phi = (F_{x1} + F_{x3}) * h_{PC} - F_{c1} * l_{f} + F_{c3} * l_{r} + m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
 $$
 
 With that analysis it is obtained the equation for half vehicle. 
@@ -286,7 +286,7 @@ The advantage for the pitch, as mentioned when the CG's position was being defin
 For it, the full equation, considering both sides of the vehicle, is the following:
 
 $$
-(I_{y} + m_{s} * d_{pitch}^{2}) * d^{2}/dt^{2} * \phi = \alpha \sum F_{x} * h_{PC} - (F_{c1} + F_{c2}) * l_{f} + (F_{c3} + F_{c4}) * l_{r} + m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+(I_{y} + m_{s} * d_{pitch}^{2}) * \frac{d^{2}}{dt^{2}} * \phi = \alpha \sum F_{x} * h_{PC} - (F_{c1} + F_{c2}) * l_{f} + (F_{c3} + F_{c4}) * l_{r} + m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
 $$
 
 ### Roll-model
@@ -306,6 +306,5 @@ In other words, it will be supposed that the axis that holds RC is parallel to t
 With it and following the previous analysis steps, the equation for the variation of the roll can be obtained as:
 
 $$
-(I_{x} + m_{s} * d_{roll}^{2}) * d^{2}/dt^{2} * \theta = \alpha \sum F_{y} * h_{RC} + (F_{c1} - F_{c2}) * t_{f} /2 + 
-(F_{c3} - F_{c4}) * t_{r} /2 + m_{s} * a_{y} * d_{roll} + m_{s} * g * d_{roll} * \theta
+(I_{x} + m_{s} * d_{roll}^{2}) * \frac{d^{2}}{dt^{2}} * \theta = \alpha \sum F_{y} * h_{RC} + (F_{c1} - F_{c2}) * \frac{t_{f}}{2} + (F_{c3} - F_{c4}) * \frac{t_{r}}{2} + m_{s} * a_{y} * d_{roll} + m_{s} * g * d_{roll} * \theta
 $$
