@@ -4,9 +4,8 @@
    ================================ */
 
 [data-md-color-scheme="rust"] {
-
   /* Primary Rust Orange */
-  --md-primary-fg-color: #d08700;
+  --md-primary-fg-color: #3b2e2a;
   --md-primary-fg-color--light: #e6a84a;
   --md-primary-fg-color--dark: #a65c00;
 
@@ -14,7 +13,7 @@
   --md-accent-fg-color: #b7410e;
 
   /* Background - warm paper */
-  --md-default-bg-color: #f5efe6;
+  --md-default-bg-color: #e1e1db;
   --md-default-bg-color--light: #faf6ee;
 
   /* Text */
@@ -23,7 +22,7 @@
   --md-default-fg-color--lighter: #7a5a3a;
 
   /* Code */
-  --md-code-bg-color: #f0e6d6;
+  --md-code-bg-color: #f6f7f6;
   --md-code-fg-color: #2b1e14;
 
   /* Links */
@@ -40,7 +39,7 @@
 
 [data-md-color-scheme="rust"] body {
   font-family: "Source Serif 4", Georgia, serif;
-  background-color: #f5efe6;
+  background-color: #f6f7f6;
 }
 
 [data-md-color-scheme="rust"] h1,
@@ -53,12 +52,12 @@
 
 /* Navigation sidebar */
 [data-md-color-scheme="rust"] .md-nav {
-  background-color: #efe3cf;
+  background-color: #e1e1db;
 }
 
 /* Top header */
 [data-md-color-scheme="rust"] .md-header {
-  background-color: #d08700;
+  background-color: #3b2e2a;
 }
 
 /* Code blocks */
@@ -69,7 +68,7 @@
 
 /* Inline code */
 [data-md-color-scheme="rust"] code {
-  background-color: #efe3cf;
+  background-color: #f6f7f6;
   padding: 2px 4px;
   border-radius: 4px;
 }
