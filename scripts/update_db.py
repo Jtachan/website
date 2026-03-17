@@ -17,7 +17,7 @@ BASE_ENTRIES = {
     "status": "",  # Either ongoing, maintained or finished
 }
 PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
-IGNORE_FETCH_COMMIT = False
+IGNORE_FETCH_COMMIT = True
 
 
 def check_db_entries():
@@ -69,7 +69,13 @@ def get_repo_dates(repo_link: str) -> tuple[str, str]:
 
 
 def sort_db(sort_by_update: bool = False):
-    """Sorting of the database based on the date (newer first)."""
+    """Sorting of the database based on the date (newer first).
+
+    Parameters
+    ----------
+    sort_by_update :
+        Flag to sort by the last commit date (`True`) or by the repo creation date (`False`).
+    """
     with open(PROJECTS_DB_PATH, "r", encoding="utf-8") as db:
         entries = json.load(db)
 

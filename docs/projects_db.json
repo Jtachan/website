@@ -65,6 +65,21 @@
     "status": "maintained"
   },
   {
+    "name": "Rust-Basics",
+    "lang": [
+      "Rust"
+    ],
+    "descr": "Small cargo-crates and scripts that are written for educational-only purposes.",
+    "repo": "https://github.com/Jtachan/lognalyst",
+    "md-link": "",
+    "created": "2025.10.07",
+    "last_commit": "2026.03.16",
+    "status": "maintained",
+    "tech": [
+      ""
+    ]
+  },
+  {
     "name": "Finance Tracker",
     "lang": [
       "Python"
