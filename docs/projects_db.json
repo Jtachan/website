@@ -1,5 +1,20 @@
 [
   {
+    "name": "lognalyst",
+    "lang": [
+      "Rust"
+    ],
+    "descr": "A .log file analyzer displaying statistics and filtering messages to different outputs.",
+    "repo": "https://github.com/Jtachan/lognalyst",
+    "md-link": "",
+    "created": "2026.03.11",
+    "last_commit": "2026.03.16",
+    "status": "ongoing",
+    "tech": [
+      ""
+    ]
+  },
+  {
     "name": "Home Scripts",
     "lang": [
       "Python",
@@ -88,7 +103,8 @@
     "descr": "Backporting Python objects from newer to older Python versions.",
     "repo": "https://github.com/Jtachan/PyBackport",
     "tech": [
-      "MkDocs", "PyPI"
+      "MkDocs",
+      "PyPI"
     ],
     "md-link": "",
     "created": "2024.03.20",
@@ -116,7 +132,8 @@
       "Python"
     ],
     "tech": [
-      "NumPy", "PyPI"
+      "NumPy",
+      "PyPI"
     ],
     "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
     "repo": "https://github.com/Jtachan/Rubik_sim",
@@ -131,7 +148,8 @@
       "Python"
     ],
     "tech": [
-      "MkDocs", "PyPI"
+      "MkDocs",
+      "PyPI"
     ],
     "descr": "Cipher coded to mimic the enigma machine structure, but allowing customization.",
     "repo": "https://github.com/Jtachan/enigma_cipher",
