@@ -20,7 +20,25 @@ As a teacher once said to me: _"Coding starts on the paper, not at the keyboard"
     _"If you can't explain it to a six-year-old, you don't understand it yourself."_
     — Albert Einstein
 
-### 2. Clean and readable code
+### 2. Plan an implementation
+
+I believe it is impossible to forsee all complications that any challenge will bring.
+Nonetheless, that is no valid argument to start coding without a plan.
+Those projects that continue coding on top of what there was without a clear vision are those that become unmaintainable and/or fail.
+
+A good planning starts by defining all the required parts to solve the issue.
+It does not matter that those parts might be composed of other smaller parts, as in that situation more planning would come (but only for a small specific section).
+And several times the project might need to rectify, but these moments can be easily identified if the previous plan was prepared.
+
+!!! quote
+    _"The cost of finding and fixing a software error increases exponentially with time."_
+    — Barry Boehm
+
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/boehms-curve.png">
+</div>
+
+### 3. Clean and readable code
 
 Often, after applying a solution, people need to revisit the code to apply patches or completely modify the algorithm.
 It does not matter how good someone is at coding, they will need to read that code again and understand it so they can work on it.
@@ -38,19 +56,19 @@ I mostly follow the [_Google Coding Style Guides_](https://google.github.io/styl
     _"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."_
     — Martin Fowler
 
-### 3. Optimized workflow
+### 4. Optimized workflow
 
 The idea of _"Clean code"_ does not only mean that is readable, but that is also works at a proper speed.
 Many times, resources are not being used correctly because the person most likely did not take the time to optimize afterward implementing the algorithm.
 
 In my opinion, a good code has to be reactive enough for anyone to believe it works as if it were a Real Time System (RTS).
-It is only in those sections where the "fast" code becomes incomprehensible where it must be written with the steps mentioned at [#2](#2-clean-and-readable-code).
+It is only in those sections where the "fast" code becomes incomprehensible where it must be written with the steps mentioned at [#3](#3-clean-and-readable-code).
 
 !!! quote
     _"Premature optimization is the root of all evil (or at least most of it) in programming."_
     — Donald Knuth
 
-### 4. Sturdy unit-tests
+### 5. Sturdy unit-tests
 
 Error is a human trait, impossible to avoid.
 While coding, anyone might think that they have covered all possible cases, but this is only far away from the truth.

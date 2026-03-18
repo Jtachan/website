@@ -268,9 +268,8 @@ function _rebuildTable(container) {
             th.addEventListener('click', () => {
                 _currentPage = 1;
                 if (_sortKey !== col.key) {
-                    // New column: start at ascending
                     _sortKey = col.key;
-                    _sortDir = 'asc';
+                    _sortDir = 'desc';
                 } else {
                     // Same column: advance the cycle
                     const next = SORT_CYCLE[(SORT_CYCLE.indexOf(_sortDir) + 1) % SORT_CYCLE.length];
