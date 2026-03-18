@@ -2,19 +2,16 @@
 
 Here you will find relevant information about all my projects.
 
-The following table displays a general view of all my public projects.
-Beware that it might take a few seconds to load depending on your internet connection.
+At the end of this page you will find an [**index project table**](#index-table) displaying all my public projects.
+I created this table as an easy navigation that presents the following features:
 
-The TOC at the left has organized report documents for these projects.
+- **Quick search**: Projects can be searched by a partial match either with their name or by the description.
+- **Sorting**: The columns _'Name', 'Creation date'_ and _'Last update'_ are sortable by clicking at the table header.
+- **Filter by main language**: Select one language to see only those projects which contain it.
+- **Link to report**: Click directly on the table row of the project you are interested in to jump to the report page.
+
+Alternative to the table, the TOC at the left has organized report documents for these projects.
 Here each project is organized by their most relevant language.
-
-<div id="project-table"></div>
-
-!!! tip
-    If there is any icon you don't recognize, place the mouse cursor on top of it, and it will display the name of the language or framework.
-
-!!! note
-    These are not all my repositories, but the projects that I find interesting to share the logic they have behind.
 
 ## About each project report
 
@@ -37,6 +34,12 @@ Then, each project report will display **three main sections**:
 - **Summary**: Vertical overview of the project with a GIF (if applies) displaying how the project works.
 - **Motivation**: The reason why I chose to code any project.
 - **Project road**: Here I describe how I thought and solve the problems through the development. There might be multiple subsections for organisation purposes.
+
+## Index table
+
+Here you find the project table, organized by creation date (newest projects first) by default.
+
+<div id="project-table"></div>
 
 ## Further project ideas
 
