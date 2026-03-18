@@ -11,9 +11,9 @@ I work as an algorithm engineer, but on my free time I develop OpenSource code t
 These are the last 5 personal projects where I have commited and pushed changes (not considering this website).
 
 <table>
-    <tr>{{ get_table_headers() }}</tr>
-    {% for project in projects -%}
-        {{ load_table_row(project) }}
+    <tr>{{ get_table_headers("simple") }}</tr>
+    {% for project in projects[:5] -%}
+        <tr>{{ load_simple_table_row(project) }}</tr>
     {% endfor %}
 </table>
 

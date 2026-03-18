@@ -6,9 +6,14 @@ from datetime import datetime
 NOF_ITEMS = 5
 KEY_HEADER_MAPPING = {
     "name": "Name",
+    "lang": "Main Language",
     "descr": "Description",
-    "last_commit": "Last Commit (YYYY.MM.DD)",
+    "repo": "GitHub Repo",
+    "last_commit": "Last Commit (ISO)",
+    "status": "Status"
 }
+SIMPLIFIED_HEADER_KEYS = ("name", "descr", "last_commit")
+PROJECT_TABLE_HEADER_KEYS = ("repo", "lang", "status")
 
 
 def define_env(env):
@@ -19,15 +24,20 @@ def define_env(env):
         data,
         key=lambda x: datetime.strptime(x["last_commit"], "%Y.%m.%d"),
         reverse=True,
-    )[:NOF_ITEMS]
+    )
 
     @env.macro
-    def load_table_row(item: dict) -> str:
+    def load_simple_table_row(item: dict) -> str:
         """Loading a table row in HTML format"""
-        row_data = "".join(f"<td>{item[key]}</td>" for key in KEY_HEADER_MAPPING)
-        return "<tr>" + row_data + "</tr>"
+        return "".join(f"<td>{item[key]}</td>" for key in SIMPLIFIED_HEADER_KEYS)
 
     @env.macro
-    def get_table_headers() -> str:
+    def load_project_table_data(pr_name: str) -> str:
+        return ""
+
+    @env.macro
+    def get_table_headers(mode: str) -> str:
         """Returning all headers of the table."""
-        return "".join(f"<th>{head}</th>" for head in KEY_HEADER_MAPPING.values())
+        headers = SIMPLIFIED_HEADER_KEYS if mode == "simple" else PROJECT_TABLE_HEADER_KEYS
+        return "".join(f"<th>{KEY_HEADER_MAPPING[head]}</th>" for head in headers)
+

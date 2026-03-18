@@ -25,6 +25,7 @@ nav:
 
 exclude_docs: |
   *.txt
+  _templates/*
 
 theme:
   name: material

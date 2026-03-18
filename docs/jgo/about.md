@@ -35,7 +35,7 @@ And several times the project might need to rectify, but these moments can be ea
     — Barry Boehm
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/boehms-curve.png">
+<img src="../../assets/images/boehms-curve.png" alt="Boehm's curve">
 </div>
 
 ### 3. Clean and readable code
