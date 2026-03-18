@@ -1,10 +1,12 @@
 # My Projects
 
 Here you will find relevant information about all my projects.
-You can search any project either:
 
-- Using the left TOC, where all reports are sorted by the main used coding language.
-- By using the table, where you can apply filters or sort by columns. Click directly on the row of the project to jump to the report.
+The following table displays a general view of all my public projects.
+Beware that it might take a few seconds to load depending on your internet connection.
+
+The TOC at the left has organized report documents for these projects.
+Here each project is organized by their most relevant language.
 
 <div id="project-table"></div>
 

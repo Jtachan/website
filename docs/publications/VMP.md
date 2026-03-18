@@ -206,7 +206,9 @@ A clear example of the vehicle slipping is driving on ice.
 
 The difference of the ideal track and the real one is defined the slip angle ($\beta$).
 
+<div style="display: flex; justify-content: center">
 <img src="../../assets/images/vmp/slip_angle.png" alt="slip_angle" width=500>
+</div>
 
 With the $\beta$ the instantaneous trajectory ($\gamma$) is defined as the sum of the yaw and the slip angle.
 

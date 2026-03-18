@@ -9,17 +9,17 @@ nav:
       - Home: index.md
       - Know me better: jgo/about.md
   - Projects:
-      - Index: projects/index.md
+      - Projects: projects/index.md
       - Next projects (ideas): projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
       - JavaScript:
           - DnD Spell Table: projects/spells.md
   - Contributions:
-      - Index: contributions/index.md
+      - Contributions: contributions/index.md
       - dsiUnits: contributions/dsi_units.md
   - Publications:
-      - Index: publications/index.md
+      - Publications: publications/index.md
       - Thesis:
           - Vehicle Model Predictor: publications/VMP.md
 
@@ -28,6 +28,8 @@ exclude_docs: |
 
 theme:
   name: material
+  logo: https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png
+  favicon: https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png
   features:
     - announce.dismiss
     - content.tooltips
@@ -54,9 +56,12 @@ theme:
     code: Source Code Pro
 
 extra_javascript:
+  # Self JS scripts-configs
   - assets/js/project_table.js
   - assets/js/mathjax_cfg.js
+  # Extra fonts
   - https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Code+Pro&display=swap
+  # Math (LaTeX) support
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
