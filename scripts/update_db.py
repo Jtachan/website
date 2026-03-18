@@ -11,7 +11,7 @@ BASE_ENTRIES = {
     "tech": [""],  # All used frameworks (most relevant first)
     "descr": "",  # Basic project description
     "repo": "",  # Link to the repository
-    "md-link": "",  # Link to the post (markdown file)
+    "md-file-name": "",  # Link to the post (markdown file)
     "created": "",  # Start date of the project finalization in ISO format YYYY.MM.DD
     "last_commit": "",  # ISO date of the last commit at 'main'/'master'
     "status": "",  # Either ongoing, maintained or finished

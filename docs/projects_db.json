@@ -6,7 +6,7 @@
     ],
     "descr": "A .log file analyzer displaying statistics and filtering messages to different outputs.",
     "repo": "https://github.com/Jtachan/lognalyst",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2026.03.11",
     "last_commit": "2026.03.16",
     "status": "ongoing",
@@ -22,7 +22,7 @@
     ],
     "descr": "General scripts to run/automate small tasks or as helpers for very simple cases.",
     "repo": "https://github.com/Jtachan/HomeScripts",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2026.02.24",
     "last_commit": "2026.02.25",
     "status": "maintained",
@@ -43,7 +43,7 @@
     "created": "2026.01.21",
     "last_commit": "2026.02.24",
     "status": "maintained",
-    "md-link": ""
+    "md-file-name": ""
   },
   {
     "name": "DnD Spells Table (ES)",
@@ -59,7 +59,7 @@
     ],
     "descr": "Interactive and quick table for easy and fast access to a small dataset.",
     "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
-    "md-link": "projects/spells.md",
+    "md-file-name": "projects/spells.md",
     "created": "2025.11.16",
     "last_commit": "2026.02.04",
     "status": "maintained"
@@ -71,7 +71,7 @@
     ],
     "descr": "Small cargo-crates and scripts that are written for educational-only purposes.",
     "repo": "https://github.com/Jtachan/lognalyst",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2025.10.07",
     "last_commit": "2026.03.16",
     "status": "maintained",
@@ -90,7 +90,7 @@
     ],
     "descr": "Application to track expenses and get statistical plots over these.",
     "repo": "https://github.com/Jtachan/FinanceTracker",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2025.02.20",
     "last_commit": "2026.02.24",
     "status": "finished"
@@ -105,7 +105,7 @@
     ],
     "descr": "Sudoku GUI generated with Python",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2024.11.19",
     "last_commit": "2024.11.24",
     "status": "finished"
@@ -121,7 +121,7 @@
       "MkDocs",
       "PyPI"
     ],
-    "md-link": "projects/pybackport.md",
+    "md-file-name": "pybackport",
     "created": "2024.03.20",
     "last_commit": "2026.02.12",
     "status": "maintained"
@@ -136,7 +136,7 @@
     ],
     "descr": "Simulation generated to experiment about other algorithms.",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2024.02.16",
     "last_commit": "2024.11.24",
     "status": "finished"
@@ -152,7 +152,7 @@
     ],
     "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
     "repo": "https://github.com/Jtachan/Rubik_sim",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2023.09.01",
     "last_commit": "2024.02.24",
     "status": "finished"
@@ -168,7 +168,7 @@
     ],
     "descr": "Cipher coded to mimic the enigma machine structure, but allowing customization.",
     "repo": "https://github.com/Jtachan/enigma_cipher",
-    "md-link": "",
+    "md-file-name": "",
     "created": "2023.07.09",
     "last_commit": "2023.09.03",
     "status": "finished"
