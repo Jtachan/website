@@ -38,12 +38,14 @@ function getLangIcon(lang) {
     return img;
 }
 
-let _allProjects = null; // cached dataset — loaded only once
-let _filterLang = '';   // active language filter value
-let _searchQuery = '';   // active search string
-let _sortKey = null; // column key currently sorted, or null
-let _sortDir = null; // 'asc' | 'desc' | null
-const SORT_CYCLE = [null, 'asc', 'desc'];
+let _allProjects = null;
+let _filterLang = '';
+let _searchQuery = '';
+let _sortKey = null;
+let _sortDir = null;
+const SORT_CYCLE = [null, 'desc', 'asc'];
+let _currentPage = 1;
+let _pageSize = 5;
 
 async function _loadData() {
     if (_allProjects !== null) return; // already in memory
@@ -111,10 +113,10 @@ function _ensureControls(container) {
     searchInput.placeholder = 'Name or description…';
     searchInput.style.padding = '4px 8px';
 
-    // Restore previous search value when the user navigates back
     searchInput.value = _searchQuery;
 
     searchInput.addEventListener('input', () => {
+        _currentPage = 1;
         _searchQuery = searchInput.value.trim();
         _rebuildTable(container);
     });
@@ -149,6 +151,7 @@ function _ensureControls(container) {
 
     langSelect.value = _filterLang;
     langSelect.addEventListener('change', () => {
+        _currentPage = 1;
         _filterLang = langSelect.value;
         _rebuildTable(container);
     });
@@ -158,11 +161,92 @@ function _ensureControls(container) {
     container.insertBefore(bar, container.firstChild);
 }
 
+function _ensurePagination(container) {
+    if (container.querySelector('.pt-pagination')) return;
+
+    const bar = document.createElement('div');
+    bar.className = 'pt-pagination';
+    bar.style.cssText = 'display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap;';
+
+    // ── Page-size selector ──────────────────────────────────────────────────
+    const sizeLabel = document.createElement('label');
+    sizeLabel.style.cssText = 'display:flex;align-items:center;gap:6px;';
+    sizeLabel.textContent = 'Show: ';
+
+    const sizeSelect = document.createElement('select');
+    sizeSelect.style.padding = '4px 8px';
+    [5, 10, 15].forEach(n => {
+        const opt = document.createElement('option');
+        opt.value = n;
+        opt.textContent = n;
+        if (n === _pageSize) opt.selected = true;
+        sizeSelect.appendChild(opt);
+    });
+    sizeSelect.addEventListener('change', () => {
+        _pageSize = parseInt(sizeSelect.value, 10);
+        _currentPage = 1;
+        _rebuildTable(container);
+    });
+
+    sizeLabel.appendChild(sizeSelect);
+    bar.appendChild(sizeLabel);
+
+    // ── Navigation buttons ──────────────────────────────────────────────────
+    const makeBtn = (label) => {
+        const btn = document.createElement('button');
+        btn.textContent = label;
+        btn.style.cssText = 'padding:4px 8px;cursor:pointer;';
+        return btn;
+    };
+
+    const btnFirst = makeBtn('<<');
+    const btnPrev = makeBtn('<');
+    const btnNext = makeBtn('>');
+    const btnLast = makeBtn('>>');
+
+    // Page-info span ("Page 1 of 4")
+    const pageInfo = document.createElement('span');
+    pageInfo.className = 'pt-page-info';
+
+    btnFirst.addEventListener('click', () => {
+        _currentPage = 1;
+        _rebuildTable(container);
+    });
+    btnPrev.addEventListener('click', () => {
+        _currentPage--;
+        _rebuildTable(container);
+    });
+    btnNext.addEventListener('click', () => {
+        _currentPage++;
+        _rebuildTable(container);
+    });
+    btnLast.addEventListener('click', () => {
+        const total = _getFilteredSorted().length;
+        _currentPage = Math.max(1, Math.ceil(total / _pageSize));
+        _rebuildTable(container);
+    });
+
+    bar.appendChild(btnFirst);
+    bar.appendChild(btnPrev);
+    bar.appendChild(pageInfo);
+    bar.appendChild(btnNext);
+    bar.appendChild(btnLast);
+
+    container.appendChild(bar);
+}
+
+
 function _rebuildTable(container) {
     const old = container.querySelector('table');
     if (old) old.remove();
 
     const projects = _getFilteredSorted();
+    const totalProjects = projects.length;
+    const totalPages = Math.max(1, Math.ceil(totalProjects / _pageSize));
+    _currentPage = Math.min(Math.max(1, _currentPage), totalPages); // clamp
+
+    const pageStart = (_currentPage - 1) * _pageSize;
+    const paginated = projects.slice(pageStart, pageStart + _pageSize);
 
     const table = document.createElement('table');
 
@@ -182,6 +266,7 @@ function _rebuildTable(container) {
             th.style.cursor = 'pointer';
             th.title = 'Click to sort';
             th.addEventListener('click', () => {
+                _currentPage = 1;
                 if (_sortKey !== col.key) {
                     // New column: start at ascending
                     _sortKey = col.key;
@@ -204,7 +289,7 @@ function _rebuildTable(container) {
 
     const tbody = document.createElement('tbody');
 
-    if (projects.length === 0) {
+    if (paginated.length === 0) {
         const tr = document.createElement('tr');
         const td = document.createElement('td');
         td.colSpan = columnConfig.length;
@@ -213,7 +298,7 @@ function _rebuildTable(container) {
         tr.appendChild(td);
         tbody.appendChild(tr);
     } else {
-        projects.forEach(project => {
+        paginated.forEach(project => {
             const row = document.createElement('tr');
 
             // Clicking a row navigates to its md-file-name
@@ -245,6 +330,19 @@ function _rebuildTable(container) {
 
     table.appendChild(tbody);
     container.appendChild(table);
+
+    const bar = container.querySelector('.pt-pagination');
+    const pageInfo = container.querySelector('.pt-page-info');
+    if (bar && pageInfo) {
+        pageInfo.textContent = `Page ${_currentPage} of ${totalPages}`;
+
+        const buttons = bar.querySelectorAll('button');
+        const [btnFirst, btnPrev, btnNext, btnLast] = buttons;
+        btnFirst.disabled = _currentPage <= 1;
+        btnPrev.disabled = _currentPage <= 1;
+        btnNext.disabled = _currentPage >= totalPages;
+        btnLast.disabled = _currentPage >= totalPages;
+    }
 }
 
 async function loadTable() {
@@ -259,8 +357,9 @@ async function loadTable() {
         return;
     }
 
-    _ensureControls(container); // idempotent — only built on first visit
-    _rebuildTable(container);   // always rebuild the table (filters/sort may differ)
+    _ensureControls(container);
+    _ensurePagination(container);
+    _rebuildTable(container);
 }
 
 document$.subscribe(function () {
