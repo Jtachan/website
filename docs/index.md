@@ -18,4 +18,4 @@ These are the last 5 personal projects where I have commited and pushed changes 
 </table>
 
 !!! Note
-    See the [**index table**](projects/index.md) to visualize all my personal projects.
+    See the [**index table**](projects/index.md#index-table) to visualize all my personal projects.

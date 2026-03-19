@@ -14,6 +14,7 @@ KEY_HEADER_MAPPING = {
 }
 SIMPLIFIED_HEADER_KEYS = ("name", "descr", "last_commit")
 PROJECT_TABLE_HEADER_KEYS = ("repo", "lang", "status")
+STATUS_COLOR_MAP = {"maintained": "deepskyblue", "finished": "green", "ongoing": "red"}
 
 
 def define_env(env):
@@ -33,11 +34,23 @@ def define_env(env):
 
     @env.macro
     def load_project_table_data(pr_name: str) -> str:
+        for project in data:
+            if project["name"] == pr_name:
+                data_name = f"<a href={project['repo']}>{project['name']}</a>"
+                data_lang = f"<img src='{get_lang_icon_path(project['lang'][0])}' class='icon'>"
+                data_status = (
+                    f"<span style='color: {STATUS_COLOR_MAP[project['status']]}'>{project['status'].title()}</span>"
+                )
+                return "".join(f"<td>{d}</td>" for d in (data_name, data_lang, data_status))
         return ""
 
     @env.macro
     def get_table_headers(mode: str) -> str:
         """Returning all headers of the table."""
-        headers = SIMPLIFIED_HEADER_KEYS if mode == "simple" else PROJECT_TABLE_HEADER_KEYS
-        return "".join(f"<th>{KEY_HEADER_MAPPING[head]}</th>" for head in headers)
+        headers_map = {"simple": SIMPLIFIED_HEADER_KEYS, "project": PROJECT_TABLE_HEADER_KEYS}
+        return "".join(f"<th>{KEY_HEADER_MAPPING[head]}</th>" for head in headers_map[mode])
+
+
+def get_lang_icon_path(lang: str) -> str:
+    return f"https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/{lang.lower()}.svg"
 
