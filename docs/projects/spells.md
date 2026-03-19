@@ -2,14 +2,8 @@
 
 <div style="display: flex; justify-content: center">
 <table>
-    <tr><th>GitHub Repo</th><th>Main Language</th><th>Status</th></tr>
-    <tr>
-        <td><a href="https://github.com/Jtachan/DnD-5.5-Spells-ES">DnD Spells (ES)</a></td>
-        <td align="center">
-            <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/code-icons/javascript.svg" alt="JS" title="JavaScript" width="30">
-        </td>
-        <td><span style="color: deepskyblue">Maintained</span></td>
-    </tr>
+    <tr>{{ get_table_headers("project") }}</tr>
+    <tr>{{ load_project_table_data("DnD Spells Table (ES)") }}</tr>
 </table>
 </div>
 
