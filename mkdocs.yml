@@ -13,6 +13,8 @@ nav:
       - Next projects (ideas): projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
+      - Rust:
+          - Lognalyst: projects/lognalyst.md
       - JavaScript:
           - DnD Spell Table: projects/spells.md
   - Contributions:

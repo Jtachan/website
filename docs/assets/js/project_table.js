@@ -272,8 +272,7 @@ function _rebuildTable(container) {
                     _sortDir = 'desc';
                 } else {
                     // Same column: advance the cycle
-                    const next = SORT_CYCLE[(SORT_CYCLE.indexOf(_sortDir) + 1) % SORT_CYCLE.length];
-                    _sortDir = next;
+                    _sortDir = SORT_CYCLE[(SORT_CYCLE.indexOf(_sortDir) + 1) % SORT_CYCLE.length];
                     if (!_sortDir) _sortKey = null;
                 }
                 _rebuildTable(container);
