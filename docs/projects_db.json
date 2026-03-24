@@ -31,21 +31,6 @@
     ]
   },
   {
-    "name": "PyWrappers",
-    "lang": [
-      "Python"
-    ],
-    "tech": [
-      "MkDocs"
-    ],
-    "descr": "Python wrappers and decorators to use mostly for debugging purposes.",
-    "repo": "https://github.com/Jtachan/PyWrappers",
-    "created": "2026.01.21",
-    "last_commit": "2026.02.24",
-    "status": "maintained",
-    "md-file-name": ""
-  },
-  {
     "name": "DnD Spells Table (ES)",
     "lang": [
       "JavaScript",
