@@ -17,7 +17,7 @@ BASE_ENTRIES = {
     "status": "",  # Either ongoing, maintained or finished
 }
 PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
-IGNORE_FETCH_COMMIT = True
+IGNORE_FETCH_COMMIT = False
 
 
 def check_db_entries():
