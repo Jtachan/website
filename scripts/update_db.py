@@ -16,7 +16,7 @@ BASE_ENTRIES = {
     "last_commit": "",  # ISO date of the last commit at 'main'/'master'
     "status": "",  # Either ongoing, maintained or finished
 }
-PROJECTS_DB_PATH = Path().resolve().parent / "docs" / "projects_db.json"
+PROJECTS_DB_PATH = Path(__file__).parent.parent / "docs" / "projects_db.json"
 IGNORE_FETCH_COMMIT = False
 
 
