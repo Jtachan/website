@@ -2,7 +2,7 @@ name: Fetch Projects DB updates
 
 on:
   schedule:
-    - cron: * * 3 * 0  # Running only one day a week (Sunday) to minimize calls.
+    - cron: "* * 3 * 0"  # Running only one day a week (Sunday) to minimize calls.
   workflow_dispatch:
 
 permissions:
