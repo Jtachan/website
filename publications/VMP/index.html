@@ -1,0 +1,1944 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Findings, thoughts, tutorials, work. Pieces of my mind!">
+      
+      
+      
+        <link rel="canonical" href="https://jtachan.github.io/website/publications/VMP/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Vehicle Model Predictor - Jtachan website</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Serif 4";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheet/tables.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheet/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="rust" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vehicle-model-predictor-with-6-dof" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Jtachan website" class="md-header__button md-logo" aria-label="Jtachan website" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jtachan website
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vehicle Model Predictor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="rust" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jtachan/website/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jtachan/website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributions/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Publications
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Jtachan website" class="md-nav__button md-logo" aria-label="Jtachan website" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png" alt="logo">
+
+    </a>
+    Jtachan website
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jtachan/website/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jtachan/website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jgo/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Know me better
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/nextup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next projects (ideas)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/pybackport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyBackport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/enigma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enigma Cipher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rust
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rust
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/lognalyst/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lognalyst
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JavaScript
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/spells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DnD Spell Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../contributions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributions
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributions/dsi_units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dsiUnits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thesis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Thesis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicle Model Predictor
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicle Model Predictor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vehicle-characterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vehicle characterization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vehicle characterization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relation-steering-wheel-and-front-tyres-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation steering wheel and front tyres rotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#center-of-gravity-cg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Center of Gravity (CG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-of-one-fourth-vehicle-damper-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model of one-fourth vehicle: Damper model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bicycle-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bicycle model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinematic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cinematic models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cinematic models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roll-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roll approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitch-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-model-for-pitch-and-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic model for pitch and roll
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic model for pitch and roll">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pitch-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch-model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roll-model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vehicle-characterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vehicle characterization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vehicle characterization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relation-steering-wheel-and-front-tyres-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation steering wheel and front tyres rotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#center-of-gravity-cg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Center of Gravity (CG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-of-one-fourth-vehicle-damper-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model of one-fourth vehicle: Damper model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bicycle-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bicycle model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinematic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cinematic models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cinematic models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roll-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roll approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitch-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-model-for-pitch-and-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic model for pitch and roll
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic model for pitch and roll">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pitch-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch-model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roll-model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="vehicle-model-predictor-with-6-dof">Vehicle Model Predictor with 6-DoF<a class="headerlink" href="#vehicle-model-predictor-with-6-dof" title="Permanent link">&para;</a></h1>
+<p>This was my Final <strong>Bachelor's Degree Project</strong> at the University of Alcalá de Henares.
+In it, at the last page, it's all the external links and bibliography I used for research.</p>
+<p>The <strong>motivation</strong> for the research is to find a mathematically accurate vehicle model, which can predict the 6 degrees of freedom (DoF) of a vehicle in motion.
+With it, the model could help at autonomous driving applications.
+Within the main idea, it was desired to implement the model at an odometry application to improve the efficiency of the <em>Unscented Kalman Filter</em> (UKF).</p>
+<div style="display: flex; justify-content: center">
+    <img src="../../assets/images/vmp/full_vehicle.png" width=500 alt="vehicle_model">
+</div>
+
+<h2 id="project-specifications">Project specifications<a class="headerlink" href="#project-specifications" title="Permanent link">&para;</a></h2>
+<p>The first step was to set all the signals and variables that the model would need:</p>
+<ul>
+<li><em>State variables:</em><ul>
+<li>Cartesian positioning along all axes: <span class="arithmatex">\(X, Y, Z\)</span></li>
+<li>Rotation along all axes: roll (<span class="arithmatex">\(\theta\)</span>), pitch (<span class="arithmatex">\(\phi\)</span>) and yaw (<span class="arithmatex">\(\psi\)</span>)</li>
+</ul>
+</li>
+<li><em>Input control signals:</em><ul>
+<li>Position of the steering wheel: <span class="arithmatex">\(\lambda\)</span></li>
+<li>Vehicle speed: <span class="arithmatex">\(V\)</span></li>
+</ul>
+</li>
+</ul>
+<div style="display: flex; justify-content: center">
+  <img src="../../assets/images/vmp/rpy.png" width=500 alt="roll_pitch_yaw">
+</div>
+
+<p>Some additional criteria was also specified to simplify the model:</p>
+<ul>
+<li>The vehicle is a four tyres private car</li>
+<li>The vehicle travels without any significant load</li>
+<li>The model works for low velocity (urban routes)</li>
+<li>The road has no slope and no bumps</li>
+</ul>
+<p>With it, the final model is defined as a <strong>combination</strong> of different mathematical and/or physical models.</p>
+<h2 id="vehicle-characterization">Vehicle characterization<a class="headerlink" href="#vehicle-characterization" title="Permanent link">&para;</a></h2>
+<h3 id="relation-steering-wheel-and-front-tyres-rotation">Relation steering wheel and front tyres rotation<a class="headerlink" href="#relation-steering-wheel-and-front-tyres-rotation" title="Permanent link">&para;</a></h3>
+<p>As specified before, one of the control signals is the steering wheel position (as an angle).
+However, this data has to be transformed into a front tyre rotation to be used at the model.
+By following the Ackerman turning model, the rotation of the tyre is greater at the inner wheel than the outer.</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/Ackerman.png" alt="ackerman" width=500>
+</div>
+
+<p>With this information, the final solution will show the ratio steering wheel / middle tyre.
+The middle tyre does not exist physically, but it will be used as an approximation.
+For the ratio calculation, a Citröen C4 is used as the test model for all physical measurements.
+Thus, the first measurement was for the tyres rotation, obtaining the following results:</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/tyres_rotation.png" alt="tyres_rotation" width=650>
+</div>
+
+<p>At the graph, the orange function represents the left tyre and the blue one, the right tyre.
+The ratio was obtained by the second degree equation of the curve created by the mean of both, the left and right tyres, measurements.</p>
+<div class="arithmatex">\[
+ratio = 15.75 + 2 * 10^{-16} * \lambda - 4 * 10^{-6} * \lambda^{2}
+\]</div>
+<p>By taking care of no linealities, the front middle tyre rotation (<span class="arithmatex">\(\delta\)</span>) is defined as following:</p>
+<div class="arithmatex">\[
+\delta = \arctan(\frac{\lambda}{ratio})
+\]</div>
+<h3 id="center-of-gravity-cg">Center of Gravity (CG)<a class="headerlink" href="#center-of-gravity-cg" title="Permanent link">&para;</a></h3>
+<p>The CG is the imaginary point around which all resultant torques vanish.
+Thus, by definition, the CG is positioned within the body as a function of the weight distribution.</p>
+<p>By analyzing a vehicle; and defining the axis as X to the front, Y to the left and Z upwards; its CG is position:</p>
+<ul>
+<li>Closer to the front of the vehicle at the X axis.</li>
+<li>At the origin at the Y axis, because a vehicle is laterally well-balanced.</li>
+<li>Close to the ground (the origin) at the axis Z but with height.</li>
+</ul>
+<p>The only two coordinates that are not known are the X and Z position.
+These can be found at any vehicle by realizing two weight measurements and applying trigonometry:</p>
+<table>
+<thead>
+<tr>
+<th>First measurement</th>
+<th>Second measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../../assets/images/vmp/side_cg.png" alt="CG" width=450></td>
+<td><img src="../../assets/images/vmp/side_elev_cg.png" alt="elevated_CG" width=450></td>
+</tr>
+</tbody>
+</table>
+<p>With the <strong>first measurement</strong> it's known the front and rear mass (<span class="arithmatex">\(M_{f}, M_{r}\)</span>).
+Applying these terms to the equilibrium equation, the distance from CG to the front and the rear distance (<span class="arithmatex">\(l_{f}, l_{r}\)</span>) are found, defining the CG position along the X axis.
+At the next equations, <span class="arithmatex">\(L\)</span> represents the wheelbase of the vehicle.</p>
+<div class="arithmatex">\[
+l_{f} = L * \frac{M_{r}}{M}
+\]</div>
+<div class="arithmatex">\[
+l_{r} = L * \frac{M_{f}}{M} = L - l_{f}
+\]</div>
+<p>With the <strong>second measurement</strong>, <span class="arithmatex">\(H\)</span> is a selected height to elevate the rear part of the vehicle.
+Applying basic trigonometry, the angle represented as <span class="arithmatex">\(\Theta\)</span> is also known. 
+Therefore, because of the new mass distribution due to the elevation, the front and rear masses (<span class="arithmatex">\(M_{1}, M_{2}\)</span>) are different.
+<br />Then the height of the CG is defined by the following mathematical relation:</p>
+<div class="arithmatex">\[
+Z_{CG} = \frac{M_{1} * l_{f} - M_{2} * l_{r}}{M * \tan\Theta}
+\]</div>
+<p>With that las equation, all coordinates of the CG are known.</p>
+<h3 id="model-of-one-fourth-vehicle-damper-model">Model of one-fourth vehicle: Damper model<a class="headerlink" href="#model-of-one-fourth-vehicle-damper-model" title="Permanent link">&para;</a></h3>
+<p>When a vehicle is in motion, the angles of pitch and roll appear when it changes its speed and/or it takes a turn.
+This effect can only exist if the mechanical properties of the vehicle allows it.
+If we imagine a metal rod, the rod cannot be compressed to change its total length.
+However, if we imagine a spring, it can be compressed.</p>
+<p>A vehicle experiences this effect because it has a damper system joining each tyre to the chassis.
+There are also two anti-roll rods: one joining the front tyres and one joining the rear tyres, but these will be neglected at the model.
+Thus, the last part to characterize of the vehicle is the system of the dampers.</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/dumper.png" alt="dumper" width=250>
+</div>
+
+<p>The compression force that experiences a damper (<span class="arithmatex">\(F_{ci}\)</span>) is defined by a second order equation, in function of the chassis displacement:</p>
+<div class="arithmatex">\[
+F_{ci} = - K_{i} (z_{s} - z_{s0}) - D_{i} (\dot z_{s} - \dot z_{s0}) + m_{si} * g
+\]</div>
+<p>At the equation, each letter represents:</p>
+<ul>
+<li><span class="arithmatex">\(i\)</span> is the number representing each corner of the vehicle, going from 1 to 4.</li>
+<li><span class="arithmatex">\(K\)</span> is the spring constant.</li>
+<li><span class="arithmatex">\(D\)</span> is the coefficient of friction of the damper.</li>
+<li><span class="arithmatex">\(m_{s}\)</span> is the chassis mass hold by the damper.</li>
+</ul>
+<p>To model all dampers is not needed to make all calculations four times.
+Both front dampers are equal and both rear dampers are equal.
+Then calculations are only needed to be carried twice.</p>
+<p>And at last, two approximations will be applied:</p>
+<ul>
+<li>The tyre doesn't deform. All the vertical displacement will be hold at the damper.</li>
+<li>The model of a single damper is a 1-DoF model. It only accepts vertical displacement and doesn't have any rotations.</li>
+</ul>
+<p>With the previous statements and at a static state, the damper's force is equal to the weight of the chassis. 
+Then the only acceleration is the gravity.
+Applying it at the previous equation, the constant <span class="arithmatex">\(K\)</span> can be defined.
+For it, the vertical displacement will be the difference of the extended spring minus the length of the spring when the vehicle is at rest on the floor. </p>
+<div class="arithmatex">\[
+K_{i}(z_{s} - z_{s0}) =  m_{si} * g
+\]</div>
+<p>With it, the only remaining parameter is the coefficient of friction <span class="arithmatex">\(D\)</span>. 
+To calculate it, the full equation has to be reorganized at the Laplace domain to obtain the transfer function.
+For it, <span class="arithmatex">\(Z_{s}\)</span> is the output and <span class="arithmatex">\(Z_{s0}\)</span> the input.</p>
+<div class="arithmatex">\[
+\frac{Z_{s}(s)}{Z_{s0}(s)} = \frac{D * s + K}{m_{s} * s^{2} + D * s + K}
+\]</div>
+<p>The parameters are obtained by analyzing the characteristic equation from the transfer function.
+This one has to be compared to the second order equation of a damped system.</p>
+<div class="arithmatex">\[
+s^{2} + s * \frac{D}{m_{s}} + \frac{K}{m_{s}} = s^{2} + s * 2 \xi \omega_{n} + \omega_{n}^{2}
+\]</div>
+<p>By comparing the terms all the parameters can be obtained as long as <span class="arithmatex">\(\xi\)</span> is defined.
+The <span class="arithmatex">\(\xi\)</span> at a damper is not constant, taking a value among <span class="arithmatex">\(0.7\)</span> and <span class="arithmatex">\(0.9\)</span>.
+However, taking in consideration the final model won't travel at fast velocities and 
+the road is considered in good conditions, its value will be considered constant at <span class="arithmatex">\(0.7\)</span>.</p>
+<div class="arithmatex">\[
+\omega_{n} = \sqrt{\frac{K}{m_{s}}}
+\]</div>
+<div class="arithmatex">\[
+D = 2 \omega_{n} m_{s} \xi
+\]</div>
+<p>For a more precise approach, a curve force-velocity should be analyzed at a test bench.
+This curve characterizes the <span class="arithmatex">\(\xi\)</span> factor of a damper.</p>
+<h2 id="bicycle-model">Bicycle model<a class="headerlink" href="#bicycle-model" title="Permanent link">&para;</a></h2>
+<p>The simplified bicycle model aliases the trajectory of a vehicle assuming it only has one front wheel and one rear wheel.
+With a 2D analysis, this model only has 3 state variables, which represent the DoF of the model, and 2 control signals:</p>
+<ul>
+<li>State variables: <span class="arithmatex">\(X, Y, \psi\)</span></li>
+<li>Control signals: <span class="arithmatex">\(V, \delta\)</span></li>
+</ul>
+<p>As it can be noticed, a control signal is the rotation of the front wheel (<span class="arithmatex">\(\delta\)</span>).
+Previously has been proven how to obtain this parameter prom the steering wheel position, so from now on all equations will show only the <span class="arithmatex">\(\delta\)</span> parameter.</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/bicycle.png" alt="bicycle" width=500>
+</div>
+
+<p>The basics of physics establish that a coefficient of friction <span class="arithmatex">\(\mu\)</span> is needed, between the tyres and the road, for the vehicle being able to travel.
+An infinite <span class="arithmatex">\(\mu\)</span> would mean a perfect adhesion of the vehicle to the ground, resulting in a perfect trajectory when turning.
+At the contrary, a <span class="arithmatex">\(\mu\)</span> with a very low value would mean to the vehicle to slip.
+A clear example of the vehicle slipping is driving on ice.</p>
+<p>The difference of the ideal track and the real one is defined the slip angle (<span class="arithmatex">\(\beta\)</span>).</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/slip_angle.png" alt="slip_angle" width=500>
+</div>
+
+<p>With the <span class="arithmatex">\(\beta\)</span> the instantaneous trajectory (<span class="arithmatex">\(\gamma\)</span>) is defined as the sum of the yaw and the slip angle.</p>
+<div class="arithmatex">\[
+\gamma = \psi + \beta
+\]</div>
+<p>However, <span class="arithmatex">\(\gamma\)</span> doesn't show he real evolution of the track.
+Therefore, a further analysis is needed to find the derivate of the state variables.
+This is done by applying trigonometry to the bicycle diagram to know <span class="arithmatex">\(\beta\)</span>.</p>
+<div class="arithmatex">\[
+\beta = \arctan(l_{r} * \frac{\tan\delta}{L})
+\]</div>
+<p>By knowing <span class="arithmatex">\(\beta\)</span> it is known <span class="arithmatex">\(\gamma\)</span> and the differences at velocity for each of the state variables.</p>
+<div class="arithmatex">\[
+\frac{dX}{dt} = V * cos(\psi + \beta)
+\]</div>
+<div class="arithmatex">\[
+\frac{dY}{dt} = V * sin(\psi + \beta)
+\]</div>
+<div class="arithmatex">\[
+\frac{d\psi}{dt} = V * \frac{sin\beta}{l_{r}}
+\]</div>
+<h2 id="cinematic-models">Cinematic models<a class="headerlink" href="#cinematic-models" title="Permanent link">&para;</a></h2>
+<h3 id="roll-approximation">Roll approximation<a class="headerlink" href="#roll-approximation" title="Permanent link">&para;</a></h3>
+<p>Masato Abe and W. Manning present a way to determine the steady state value of the roll of a moving vehicle,
+documented at their book <em>Vehicle Handling Dynamics</em>.
+For it, they announce only certain parameters are needed:</p>
+<ul>
+<li>The mass of the chassis (<span class="arithmatex">\(m_{s}\)</span>)</li>
+<li>The distance from the CG to the roll axis (<span class="arithmatex">\(d_{roll}\)</span>)</li>
+<li>The anti-roll constant (<span class="arithmatex">\(K_{\theta}\)</span>), being composed by all four dampers and the anti-roll bars.</li>
+</ul>
+<p>With these parameters, they establish the roll is a function of the lateral acceleration (<span class="arithmatex">\(a_{y}\)</span>).</p>
+<div class="arithmatex">\[
+\theta = f(a_{y}) = a_{y} * \frac{m_{s} * d_{roll}}{K_{\theta}}
+\]</div>
+<p>With the previous statement of the vehicle travelling at low speed, 
+the approximation of calculating the roll with the steady state value could be a correct approximation.</p>
+<h3 id="pitch-approximation">Pitch approximation<a class="headerlink" href="#pitch-approximation" title="Permanent link">&para;</a></h3>
+<p>Based on the theory of Masato Abe and W. Manning, a steady state pitch approximation model was developed.
+It has the same bases as the previous model, but adapted to the pitch angle.</p>
+<div class="arithmatex">\[
+\phi = f(a_{x}) = a_{x} * \frac{m_{s} * d_{pitch}}{K_{\phi}}
+\]</div>
+<h2 id="dynamic-model-for-pitch-and-roll">Dynamic model for pitch and roll<a class="headerlink" href="#dynamic-model-for-pitch-and-roll" title="Permanent link">&para;</a></h2>
+<p>This model was based on the studies made by Chalmers' University. 
+Here, a physical model was detailed and analyzed by semi-vehicle models to calculate the force momentum.
+These half-models combined create a full vehicle model that predicts the increment in acceleration for the pitch and roll angles.</p>
+<h3 id="pitch-model">Pitch-model<a class="headerlink" href="#pitch-model" title="Permanent link">&para;</a></h3>
+<p>To calculate how the pitch evolves, a side-vehicle model has to be analyzed. 
+Within it, the vehicle rotates around a Pitch Center point (<span class="arithmatex">\(PC\)</span>), which is not at the same position as the CG.</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/side_car.png" alt="side_car" width=600>
+</div>
+
+<p>As it can be seen at the image, the analysis is carried out by comparing the equations for <span class="arithmatex">\(M_{y}\)</span> resultant of the top and the bottom forces.
+By doing so, the following is the equation for a side-car, at this case, the left side of the vehicle.
+At it is also taking the approximation of <span class="arithmatex">\(\tan(\alpha) \approx \alpha\)</span> for very small angles.</p>
+<div class="arithmatex">\[
+\begin{align}
+(I_{y} + m_{s} * d_{pitch}^{2}) &amp;* \frac{d^{2}\phi}{dt^{2}} = \\
+&amp;(F_{x1} + F_{x3}) * h_{PC} - F_{c1} * l_{f} + F_{c3} * l_{r} \\
+&amp;+ m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+\end{align}
+\]</div>
+<p>With that analysis it is obtained the equation for half vehicle. 
+The advantage for the pitch, as mentioned when the CG's position was being defined, is that the vehicle is symmetric at that axis.
+For it, the full equation, considering both sides of the vehicle, is the following:</p>
+<div class="arithmatex">\[
+\begin{align}
+(I_{y} + m_{s} * d_{pitch}^{2}) &amp;* \frac{d^{2}\phi}{dt^{2}} = \\
+&amp;\alpha \sum F_{x} * h_{PC} - (F_{c1} + F_{c2}) * l_{f} + (F_{c3} + F_{c4}) * l_{r} \\
+&amp;+ m_{s} * a_{x} * d_{pitch} + m_{s} * g * d_{pitch} * \phi
+\end{align}
+\]</div>
+<h3 id="roll-model">Roll-model<a class="headerlink" href="#roll-model" title="Permanent link">&para;</a></h3>
+<p>The definition of the roll-model follows the same guidelines as the pitch model.
+However, the vehicle does not have the same symmetrical properties for the front and the back.
+This affects to:
+  - The front and rear mass 
+  - The dampers characteristics
+  - The distance to the Roll Center (RC), due its axis is tilted and not parallel to the ground</p>
+<div style="display: flex; justify-content: center">
+<img src="../../assets/images/vmp/front_car.png" alt="front_car" width=550>
+</div>
+
+<p>To simplify the calculus, the only approximation to be made is to consider that RC is in fact at the same distance.
+In other words, it will be supposed that the axis that holds RC is parallel to the ground.
+With it and following the previous analysis steps, the equation for the variation of the roll can be obtained as:</p>
+<div class="arithmatex">\[
+\begin{align}
+(I_{x} + m_{s} * d_{roll}^{2}) &amp;* \frac{d^{2}\theta}{dt^{2}} = \\
+&amp;\alpha \sum F_{y} * h_{RC} + (F_{c1} - F_{c2}) * \frac{t_{f}}{2} + (F_{c3} - F_{c4}) * \frac{t_{r}}{2} \\
+&amp;+ m_{s} * a_{y} * d_{roll} + m_{s} * g * d_{roll} * \theta
+\end{align}
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publications">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Publications
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jtachan" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jaime-gonzalezg/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.annotate", "content.code.copy", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.sections", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/js/project_table.js"></script>
+      
+        <script src="../../assets/js/mathjax_cfg.js"></script>
+      
+        <script src="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&amp;family=Source+Code+Pro&amp;display=swap"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

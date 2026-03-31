@@ -1,0 +1,161 @@
+[
+  {
+    "name": "lognalyst",
+    "lang": [
+      "Rust"
+    ],
+    "descr": "A .log file analyzer displaying statistics and filtering messages to different outputs.",
+    "repo": "https://github.com/Jtachan/lognalyst",
+    "md-file-name": "lognalyst",
+    "created": "2026.03.11",
+    "last_commit": "2026.03.16",
+    "status": "ongoing",
+    "tech": [
+      ""
+    ]
+  },
+  {
+    "name": "Home Scripts",
+    "lang": [
+      "Python",
+      "Batch"
+    ],
+    "descr": "General scripts to run/automate small tasks or as helpers for very simple cases.",
+    "repo": "https://github.com/Jtachan/HomeScripts",
+    "md-file-name": "",
+    "created": "2026.02.24",
+    "last_commit": "2026.03.27",
+    "status": "maintained",
+    "tech": [
+      ""
+    ]
+  },
+  {
+    "name": "DnD Spells Table (ES)",
+    "lang": [
+      "JavaScript",
+      "Python",
+      "HTML5",
+      "CSS3"
+    ],
+    "tech": [
+      "JSON",
+      "GitHubActions"
+    ],
+    "descr": "Interactive and quick table for easy and fast access to a small dataset.",
+    "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
+    "md-file-name": "spells",
+    "created": "2025.11.16",
+    "last_commit": "2026.02.04",
+    "status": "maintained"
+  },
+  {
+    "name": "Rust-Basics",
+    "lang": [
+      "Rust"
+    ],
+    "descr": "Small cargo-crates and scripts that are written for educational-only purposes.",
+    "repo": "https://github.com/Jtachan/lognalyst",
+    "md-file-name": "rust_basics",
+    "created": "2025.10.07",
+    "last_commit": "2026.03.16",
+    "status": "maintained",
+    "tech": [
+      ""
+    ]
+  },
+  {
+    "name": "Finance Tracker",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "Bokeh",
+      "SQLite"
+    ],
+    "descr": "Application to track expenses and get statistical plots over these.",
+    "repo": "https://github.com/Jtachan/FinanceTracker",
+    "md-file-name": "finance_trk",
+    "created": "2025.02.20",
+    "last_commit": "2026.02.24",
+    "status": "finished"
+  },
+  {
+    "name": "PyQt-Sudoku",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "Qt"
+    ],
+    "descr": "Sudoku GUI generated with Python",
+    "repo": "https://github.com/Jtachan/PyQt-Sudoku",
+    "md-file-name": "pyqt_sudoku",
+    "created": "2024.11.19",
+    "last_commit": "2024.11.24",
+    "status": "finished"
+  },
+  {
+    "name": "PyBackport",
+    "lang": [
+      "Python"
+    ],
+    "descr": "Backporting Python objects from newer to older Python versions.",
+    "repo": "https://github.com/Jtachan/PyBackport",
+    "tech": [
+      "MkDocs",
+      "PyPI"
+    ],
+    "md-file-name": "pybackport",
+    "created": "2024.03.20",
+    "last_commit": "2026.02.12",
+    "status": "maintained"
+  },
+  {
+    "name": "Conway's Game of Life",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "PyGame"
+    ],
+    "descr": "Simulation generated to experiment about other algorithms.",
+    "repo": "https://github.com/Jtachan/PyQt-Sudoku",
+    "md-file-name": "conways",
+    "created": "2024.02.16",
+    "last_commit": "2024.11.24",
+    "status": "finished"
+  },
+  {
+    "name": "Rubik's Simulator",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "NumPy",
+      "PyPI"
+    ],
+    "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
+    "repo": "https://github.com/Jtachan/Rubik_sim",
+    "md-file-name": "rubiks",
+    "created": "2023.09.01",
+    "last_commit": "2024.02.24",
+    "status": "finished"
+  },
+  {
+    "name": "Enigma Cipher",
+    "lang": [
+      "Python"
+    ],
+    "tech": [
+      "MkDocs",
+      "PyPI"
+    ],
+    "descr": "Cipher coded to mimic the enigma machine structure, but allowing customization.",
+    "repo": "https://github.com/Jtachan/enigma_cipher",
+    "md-file-name": "enigma",
+    "created": "2023.07.09",
+    "last_commit": "2023.09.03",
+    "status": "finished"
+  }
+]
