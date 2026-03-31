@@ -8,7 +8,7 @@ I work as an algorithm engineer, but on my free time I develop OpenSource code t
     <img alt="Most used languages: Python, Rust, C++, Javascript, HTML" src="https://raw.githubusercontent.com/Jtachan/Jtachan/refs/heads/main/profile/top_langs.svg"/>
 </div>
 
-These are the last 5 personal projects where I have commited and pushed changes (not considering this website).
+These are the last 5 personal projects where I have commited and pushed changes **on the default branch** (not considering this website).
 
 <table>
     <tr>{{ get_table_headers("simple") }}</tr>

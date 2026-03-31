@@ -13,6 +13,7 @@ nav:
       - Next projects (ideas): projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
+          - Enigma Cipher: projects/enigma.md
       - Rust:
           - Lognalyst: projects/lognalyst.md
       - JavaScript:
