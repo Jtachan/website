@@ -44,7 +44,7 @@
     ],
     "descr": "Interactive and quick table for easy and fast access to a small dataset.",
     "repo": "https://github.com/Jtachan/DnD-5.5-Spells-ES",
-    "md-file-name": "projects/spells.md",
+    "md-file-name": "spells",
     "created": "2025.11.16",
     "last_commit": "2026.02.04",
     "status": "maintained"
@@ -56,7 +56,7 @@
     ],
     "descr": "Small cargo-crates and scripts that are written for educational-only purposes.",
     "repo": "https://github.com/Jtachan/lognalyst",
-    "md-file-name": "",
+    "md-file-name": "rust_basics",
     "created": "2025.10.07",
     "last_commit": "2026.03.16",
     "status": "maintained",
@@ -75,7 +75,7 @@
     ],
     "descr": "Application to track expenses and get statistical plots over these.",
     "repo": "https://github.com/Jtachan/FinanceTracker",
-    "md-file-name": "",
+    "md-file-name": "finance_trk",
     "created": "2025.02.20",
     "last_commit": "2026.02.24",
     "status": "finished"
@@ -90,7 +90,7 @@
     ],
     "descr": "Sudoku GUI generated with Python",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
-    "md-file-name": "",
+    "md-file-name": "pyqt_sudoku",
     "created": "2024.11.19",
     "last_commit": "2024.11.24",
     "status": "finished"
@@ -121,7 +121,7 @@
     ],
     "descr": "Simulation generated to experiment about other algorithms.",
     "repo": "https://github.com/Jtachan/PyQt-Sudoku",
-    "md-file-name": "",
+    "md-file-name": "conways",
     "created": "2024.02.16",
     "last_commit": "2024.11.24",
     "status": "finished"
@@ -137,7 +137,7 @@
     ],
     "descr": "Installable package to operate with the Rubik's cube using an easy and simple interface.",
     "repo": "https://github.com/Jtachan/Rubik_sim",
-    "md-file-name": "",
+    "md-file-name": "rubiks",
     "created": "2023.09.01",
     "last_commit": "2024.02.24",
     "status": "finished"

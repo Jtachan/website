@@ -1,4 +1,4 @@
-# Template project
+# Finance Tracker: Expense tracker with graphs
 
 <div style="display: flex; justify-content: center">
 <table>

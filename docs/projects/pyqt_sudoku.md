@@ -1,4 +1,4 @@
-# Template project
+# Sudoku game with PyQt6
 
 <div style="display: flex; justify-content: center">
 <table>

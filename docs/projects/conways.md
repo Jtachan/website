@@ -1,4 +1,4 @@
-# Template project
+# Conway's Game of Life
 
 <div style="display: flex; justify-content: center">
 <table>

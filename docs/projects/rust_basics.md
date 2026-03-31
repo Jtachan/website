@@ -1,4 +1,4 @@
-# Template project
+# Rust-Basics: A place for learning
 
 <div style="display: flex; justify-content: center">
 <table>
