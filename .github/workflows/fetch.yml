@@ -1,0 +1,38 @@
+name: Fetch Projects DB updates
+
+on:
+  schedule:
+    - cron: * * 3 * 0  # Running only one day a week (Sunday) to minimize calls.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+            persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+
+      - name: Run script
+        run: |
+          pip install requests
+          python scripts/update_db.py
+
+      - name: Commit and push DB changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: GitHub Actions
+          author_email: actions@github.com
+          message: 'GH commit: Update projects.json file'
+          add: 'docs/projects_db.json'
