@@ -1,5 +1,22 @@
 [
   {
+    "name": "DnDisplay",
+    "lang": [
+      "JavaScript",
+      "HTML5",
+      "CSS3"
+    ],
+    "descr": "A simple 'screen' where a GM can display their own character sheets.",
+    "repo": "https://github.com/Jtachan/DnDisplay",
+    "md-file-name": "",
+    "created": "2026.07.10",
+    "last_commit": "2026.07.10",
+    "status": "maintained",
+    "tech": [
+      ""
+    ]
+  },
+  {
     "name": "lognalyst",
     "lang": [
       "Rust"
@@ -24,7 +41,7 @@
     "repo": "https://github.com/Jtachan/HomeScripts",
     "md-file-name": "",
     "created": "2026.02.24",
-    "last_commit": "2026.03.27",
+    "last_commit": "2026.07.13",
     "status": "maintained",
     "tech": [
       ""

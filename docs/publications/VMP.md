@@ -15,7 +15,7 @@ Within the main idea, it was desired to implement the model at an odometry appli
 The first step was to set all the signals and variables that the model would need:
 
   - _State variables:_
-    - Cartesian positioning along all axes: $X, Y, Z$
+    - Cartesian positioning along all axes: \(X, Y, Z\)
     - Rotation along all axes: roll ($\theta$), pitch ($\phi$) and yaw ($\psi$)
   - _Input control signals:_
     - Position of the steering wheel: $\lambda$
