@@ -20,7 +20,7 @@ nav:
           - DnD Spell Table: projects/spells.md
   - Contributions:
       - Contributions: contributions/index.md
-      - dsiUnits: contributions/dsi_units.md
+      - PTB: contributions/ptb.md
   - Publications:
       - Publications: publications/index.md
       - Thesis:
