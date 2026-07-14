@@ -118,12 +118,37 @@
   ],
   "skills": [
     {
-      "name": "",
-      "level": "",
-      "summary": "",
+      "name": "Solution-oriented coding",
+      "summary": "Deep knowledge in creating solution-oriented code which is sturdy, reliable, scalable and well documented.",
       "keywords": [
-        "Prototyping",
-        ""
+        "Python",
+        "Rust",
+        "C/C++",
+        "HTML",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Technologies",
+      "summary": "Common known technologies required among all the recent projects I've worked on.",
+      "keywords": [
+        "Git - Github/Gitlab",
+        "OpenCV",
+        "pandas",
+        "scikit-learn",
+        "CI/CD",
+        "Docker",
+        "SQL",
+        "Qt",
+        "MkDocs"
+      ]
+    },
+    {
+      "name": "Agile methodologies",
+      "summary": "Methodologies I use to organise my work, with myself and also with my co-workers.",
+      "keywords": [
+        "Kanban",
+        "Scrum"
       ]
     }
   ],
@@ -156,13 +181,11 @@
     },
     {
       "name": "Cooking",
-      "description": "Cooking any dish can be quite liberating, no matter if a recipe is to be followed or even if the final product was created by following your instincts. As a Spaniard, I find relaxing and amusing experimenting in the kitchen, trying to extract the maximum flavour of each ingredient together with others that would compliment them.\n\nI also keep an online and open-source cookbook with every recipe I have tried and liked. This helps me to find my recipes fast and to share them among friends. See: https://jtachan.github.io/masalazafran/",
-      "keywords": [
-        "Story-telling",
-        "Expression",
-        "Problem solving",
-        "Team work"
-      ]
+      "description": "Cooking any dish can be quite liberating, no matter if a recipe is to be followed or even if the final product was created by following your instincts. As a Spaniard, I find relaxing and amusing experimenting in the kitchen, trying to extract the maximum flavour of each ingredient together with others that would compliment them.\n\nI also keep an online and open-source cookbook with every recipe I have tried and liked. This helps me to find my recipes fast and to share them among friends. See: https://jtachan.github.io/masalazafran/"
+    },
+    {
+      "name": "Being a proud uncle",
+      "description": "I love spending time with my nephew and my two nieces. I know that the time they spend with me they love, so I also got to spoil them a little bit buying them some extra ice-cream."
     }
   ],
   "references": [],
