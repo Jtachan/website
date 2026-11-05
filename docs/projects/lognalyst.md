@@ -7,7 +7,7 @@
 </table>
 </div>
 
-`lognalyst` is a project mostly for learning purposes.
+`lognalyst` is a project mostly for **learning purposes** as a first-contact with Rust.
 Its name comes from 'log' (as the file) and 'analyst'.
 
 ## Motivation
@@ -17,8 +17,6 @@ The idea of a log file analyzer was the most complete idea that I came up for im
 - Definition of a crate with multiple modules (for code organisation).
 - Handling enums, datetimes, life times, and traits.
 - Definition of CLI parser.
-- Data filtering through string matches, regex, types and timestamps.
-- Multithreading for reading multiple files at the same time.
 - Exporting results into new files.
 - Testing different modules.
 
@@ -52,23 +50,3 @@ The filters (each one over each element of the structure) should be applied all 
 
 The filters need to be defined through the CLI call, defining now the need for a better argument parser.
 Thus, even though the goal here is the logic for the filters, the first step is to learn and implement the correct use of [`clap`](https://docs.rs/clap/latest/clap/).
-
-### 4. Concurrency I/O
-
-At this point, the new feature is to use concurrency to read multiple files at the same time.
-While it is true the tool might be simple enough for the need of concurrency, the situation is a great opportunity to implement it and learn its use.
-
-Another important feature is how to export the results into a new type of log file.
-
-### 5. Crates and PyPI release
-
-At last, the project is to be released into [crates.io](https://crates.io/) and [PyPI](https://pypi.org/).
-The reason is not only to have a deployment into Crates, but also to understand how Rust code can be used as a Python tool just like, for example, [`ruff`](https://github.com/astral-sh/ruff) does.
-
-### 6. Further development
-
-At this point, the tool is actually finished.
-However, further development could also be implemented if required.
-Some points for further development are:
-
-- Multiple log file format support for I/O.
