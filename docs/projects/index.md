@@ -40,8 +40,3 @@ Then, each project report will display **three main sections**:
 Here you find the project table, organized by creation date (newest projects first) by default.
 
 <div id="project-table"></div>
-
-## Further project ideas
-
-You can find some of my ideas for new projects at [_Next Up_ projects](nextup.md).
-They are more of a help for me, a place where I can write my ideas of projects I would like to work on for fun or to learn new technologies/abilities.

@@ -10,7 +10,6 @@ nav:
       - Know me better: jgo/about.md
   - Projects:
       - Projects: projects/index.md
-      - Next projects (ideas): projects/nextup.md
       - Python:
           - PyBackport: projects/pybackport.md
           - Enigma Cipher: projects/enigma.md

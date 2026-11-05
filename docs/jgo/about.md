@@ -87,7 +87,7 @@ He orders 0 beers.<br>
 He orders 99999999999 beers.<br>
 He orders a lizard.<br>
 He orders -1 beers.<br>
-He orders a sfdeljknesv.<br>
+He orders a "sfdeljknesv".<br>
 <br>
 The first real customer walks in and asks where the bathroom is.<br>
 The bar bursts into flames.
