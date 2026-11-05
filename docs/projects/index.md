@@ -38,5 +38,6 @@ Then, each project report will display **three main sections**:
 ## Index table
 
 Here you find the project table, organized by creation date (newest projects first) by default.
+Please note that, not all my projects are displayed here, only those that I find interesting explaining and/or relevant for my profile.
 
 <div id="project-table"></div>
