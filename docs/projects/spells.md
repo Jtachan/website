@@ -7,6 +7,9 @@
 </table>
 </div>
 
+[![Stars](https://img.shields.io/github/stars/Jtachan/DnD-5.5-Spells-ES)](https://github.com/Jtachan/DnD-5.5-Spells-ES)
+[![Link](https://img.shields.io/badge/Try%20it%20online-blue?logo=javascript&logoColor=white)](https://jtachan.github.io/DnD-5.5-Spells-ES/)
+
 This project wasn't my first project where I needed to create an HTML with simple CSS, 
 but it was my first project where I chose to code in JavaScript.
 

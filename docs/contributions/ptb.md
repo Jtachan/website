@@ -2,7 +2,9 @@
 
 While working at [PTB](https://www.ptb.de/cms/) I collaborated on multiple Open-Source projects, all of them related with the [DCC (Digital Calibration Certificate) project](https://wiki.dcc.ptb.de/).
 
-## Dcc-Json Toolkit
+## Released Software
+
+### Dcc-Json Toolkit
 
 | Repository | Role | Release |
 | --- | --- | --- |
@@ -15,7 +17,7 @@ By scanning the used schema version, what the package offers is:
 - Validation of any DCC file, printing all the possible issues it has.
 - Bidirectional conversion XML-JSON for DCC files.
 
-## DCC Quantities
+### DCC Quantities
 
 | Repository | Role | Release |
 | --- | --- | --- |
@@ -28,7 +30,7 @@ The key features that the library provides are:
 - **Uncertainty & Unit Awareness**: Ensure uncertainty propagation using [`metas_unclib`](https://github.com/wollmich/metas-unclib-python-wrapper), as well as the correct unit propagation using [`dsiUnits`](#d-si-units).
 - **Object‑Oriented Arithmetic**: Allowing any math operation among Quantities (table data).
 
-## D-SI Units
+### D-SI Units
 
 | Repository | Role | Release |
 | --- | --- | --- |
@@ -42,7 +44,7 @@ This defines the cases of:
 - Allow SIRP and LaTex representation of any unit.
 - Simplify any complex unit to the tree conformed by the SI base units.
 
-## Example DCCs
+### Example DCCs
 
 | Repository | Role | Tech |
 | --- | --- | --- |

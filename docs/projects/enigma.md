@@ -10,12 +10,9 @@
 The [**Enigma Machine**](https://en.wikipedia.org/wiki/Enigma_machine) is a very well known cipher that was used in WWII.
 Its purpose was to serve as a bidirectional message cipher (encoding and decoding) with a specific configuration.
 
-[
-  ![Documentation#Getting-starter](https://img.shields.io/badge/ReadTheDocs_(click_me)-blue?logo=readthedocs)
-](https://jtachan.github.io/enigma_cipher/getting_started/)
-[
-  ![PyPI Release](https://img.shields.io/pypi/v/enigma-cipher?logo=python&logoColor=white&label=PyPI)
-](https://pypi.org/project/enigma-cipher/)
+[![Documentation#Getting-starter](https://img.shields.io/badge/ReadTheDocs_(click_me)-blue?logo=readthedocs)](https://jtachan.github.io/enigma_cipher/getting_started/)
+[![PyPI Release](https://img.shields.io/pypi/v/enigma-cipher?logo=python&logoColor=white&label=PyPI)](https://pypi.org/project/enigma-cipher/)
+[![MIT License](https://img.shields.io/github/license/Jtachan/enigma_cipher)](https://github.com/Jtachan/enigma_cipher/blob/master/LICENSE)
 
 ## Motivation
 

@@ -9,9 +9,7 @@
 
 ![tests_badge](https://github.com/Jtachan/PyBackport/actions/workflows/CI.yml/badge.svg)
 [![PyPI Version](https://img.shields.io/pypi/v/PyBackport)](https://pypi.org/project/PyBackport/)
-[![Python Version: 3.8+](https://img.shields.io/badge/python-3.8+-blue)](https://www.python.org/downloads/) 
 [![MIT License](https://img.shields.io/github/license/Jtachan/PyBackport)](https://github.com/Jtachan/PyBackport/blob/master/LICENSE)
-[![PyPI monthly downloads](https://img.shields.io/pypi/dm/PyBackport)](https://pypi.org/project/PyBackport/) 
 [![Docs](https://img.shields.io/badge/Read_the_docs-blue)](https://Jtachan.github.io/PyBackport/)
 
 The goal of `PyBackport` is to enable the use of new classes and functionalities from newer into older python releases.
