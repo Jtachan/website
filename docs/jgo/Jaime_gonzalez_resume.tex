@@ -1,0 +1,160 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Encoding, fonts, text extraction (ATS/parser friendly) ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\input{glyphtounicode}
+\pdfgentounicode=1          % makes text in the PDF copy/extract correctly
+
+% ---------- Layout ----------
+\usepackage[top=1.6cm,bottom=1.6cm,left=2cm,right=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{needspace}
+
+\definecolor{linkblue}{HTML}{0B5CAD}
+\newcommand{\link}[2]{\href{#1}{\textcolor{linkblue}{#2}}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+
+% Section headings: bold with a rule underneath
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-0.6em}\rule{\linewidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{1.1em}{0.7em}
+
+% Compact bullet lists
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.1em,topsep=0.3em,parsep=0pt,partopsep=0pt}
+
+% \entry{dates}{organisation -- role}{location}
+\newcommand{\entry}[3]{%
+  \vspace{0.7em}%
+  \textbf{#2}\hfill #1\par
+  \textit{#3}\par\vspace{0.1em}}
+
+\begin{document}
+
+% ---------- Header ----------
+{\Large\bfseries Jaime Gonzalez Gomez}\par
+{\large\bfseries Research and Algorithm Engineer}\par
+\vspace{0.6em}
+
+\begin{minipage}[t]{0.55\textwidth}
+Phone number: (+49) 0179 6061101\par
+Email address: \link{mailto:jaimenicolas.gonzalezg@gmail.com}{jaimenicolas.gonzalezg@gmail.com}\par
+LinkedIn: \link{https://www.linkedin.com/in/jaime-gonzalezg/}{linkedin.com/in/jaime-gonzalezg}
+\end{minipage}%
+\begin{minipage}[t]{0.45\textwidth}
+GitHub: \link{https://github.com/Jtachan}{github.com/Jtachan}\par
+Portfolio website: \link{https://jtachan.github.io/website/}{jtachan.github.io/website}\par
+Address: 38106 Braunschweig
+\end{minipage}
+
+% ---------- Digital skills ----------
+\section{Digital Skills}
+\underline{Languages}: Python, Rust, C/C++\par\vspace{0.25em}
+\underline{Frameworks/Technologies}: Machine Learning, Git, GitHub/GitLab, pytest, NumPy, SQLite3, Qt, OpenCV, pandas, sklearn, MkDocs/Zensical.
+
+% ---------- Work experience ----------
+\section{Work experience}
+
+\entry{06/2025 -- Current}{Physikalisch-Technische Bundesanstalt -- Research Engineer}{Braunschweig, Germany}
+\begin{itemize}
+  \item Development on multiple \textbf{Open-Source Python} libraries directly related to the DCC (\textit{Digital Calibration Certificate}) project.
+  \item Defined standards at multiple Python (internal and Open-Source) projects improving modularity, scalability, readability, code-coverage and maintenance.
+  \item Development of internal multithreading software for \textbf{metrology measurement} and data export into HDF5 format.
+\end{itemize}
+
+\entry{06/2021 -- 05/2025}{Smartmicro -- Algorithm Engineer / Software Engineer}{Braunschweig, Germany}
+\begin{itemize}
+  \item Development of robust, scalable and modular \textbf{Python} packages and \textbf{C++} modules (internal to the company) to be used for ADAS, sensor fusion and computer vision solutions.
+  \item \textbf{Prototyped} new tracking and automotive algorithms to enhance system capabilities.
+  \item Integrated a complete \textbf{documentation} for user level and \textbf{unit test} for every developed module for ease of future maintenance.
+  \item Analyzed and classified radar data, correlating it with video recordings to detect tracks and objects.
+  \item \textbf{Senior Python engineer}: \textbf{trainer} for new colleagues and serve as \textbf{key resource for Python expertise} for other colleagues, providing support, bug-fixing and optimizing algorithms.
+\end{itemize}
+
+\entry{11/2019 -- 04/2021}{Altran -- R\&D Engineer}{Madrid, Spain}
+\begin{itemize}
+  \item \textbf{Researching and prototyping} algorithms for automotive solutions.
+  \item Team leader for three people for the development of a software project.
+  \item \textbf{Deep Learning techniques} to define and training networks for automotive solutions.
+  \item Implementation and testing of AI algorithms in Linux and Raspian.
+  \item Documented all prototypes in extended reports.
+\end{itemize}
+
+\entry{02/2019 -- 11/2019}{University of Alcala de Henares (UAH) -- R\&D Intern at INVETT group}{Alcala de Henares, Spain}
+\begin{itemize}
+  \item Active member of the research group INVETT.
+  \item Researched the definition of a \textbf{vehicle predictive model} to obtain the pitch and yaw angles of a vehicle driving through a city (6 degrees of freedom).
+  \item Definition of each \textbf{3D lidar point-cloud} and positioning it respect a 3D coordinate system.
+  \item Research and definition of the pitch and roll angles for a city-driving vehicle, using as inputs the instant velocity and the steering wheel position.
+  \item Implementation of a \textbf{Kalman Filter} to define, at each state, which is the most accurate estimation of the vehicle's displacement.
+  \item Integration of the model into a lidar-odometry solution, based on the KITTI dataset.
+\end{itemize}
+
+% ---------- Education ----------
+\needspace{14\baselineskip}
+\section{Education}
+
+\textbf{Master in Artificial Intelligence and Data Engineering}\par
+2022 -- 2023 \textit{Internacional University of La Rioja (UNIR)}\par
+60 ECTS Final grade: 9.0/10.0 (3.7 GPA)
+\begin{itemize}
+  \item Intensive master's program completed while working full-time in Smartmicro.
+  \item Data analysis and manipulation.
+  \item Statistical artificial intelligence.
+  \item ML and DL (MLP, NLP, GAN, Convolutional Networks).
+  \item Understanding of leadership tools and projects management.
+  \item Final Thesis rated with honors and stored at the university repository.\\
+        Link: \link{https://reunir.unir.net/handle/123456789/15827}{reunir.unir.net/handle/123456789/15827}
+\end{itemize}
+
+\vspace{0.7em}
+\textbf{Bachelor in Electronics and Automatics Industrial Engineering} (mechatronics)\par
+2014 -- 2020 \textit{University of Alcala de Henares (UAH)}\par
+240 ECTS
+\begin{itemize}
+  \item The last two years were completed while working on R\&D projects.
+  \item Deep understanding of control systems.
+  \item Programming embedded systems for real time applications.
+  \item Analysis and design of electrical circuits.
+  \item Theoretical knowledge of mathematics and physics is involved in any robotics application.
+  \item Team leadership and management abilities.
+\end{itemize}
+
+% ---------- Additional information ----------
+\section{Additional information}
+
+\textbf{Languages}
+\begin{itemize}
+  \item Spanish (Spain): Mother tongue
+  \item English (bilingual): C1
+  \item German (fluent): B2
+\end{itemize}
+
+\textbf{Education}
+\begin{itemize}
+  \item Exchange student in year 2011-2012 in Bremerton, U.S.A.
+  \item Volunteer in Scout groups in Spain.
+  \item Continuous self-learning with Kaggel, LeetCode and projects through GitHub.
+\end{itemize}
+
+\textbf{Achievements}
+\begin{itemize}
+  \item Self-publication of book ``\textit{Relatos de Almas}'' in Amazon.
+  \item Learnt German by myself.
+\end{itemize}
+
+\textbf{Hobbies}
+\begin{itemize}
+  \item Play the guitar, write deep stories, cook and keep recipes online, and spend time with my nephew and my nieces.
+\end{itemize}
+
+\end{document}
