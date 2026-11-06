@@ -19,7 +19,8 @@ nav:
           - DnD Spell Table: projects/spells.md
   - Contributions:
       - Contributions: contributions/index.md
-      - PTB: contributions/ptb.md
+      - Collaborations:
+          - PTB: contributions/ptb.md
       - Thesis:
           - Vehicle Model Predictor: contributions/VMP.md
 

@@ -1,5 +1,17 @@
 # My Projects
 
+## Index table
+
+Here you find the project table, organized by creation date (newest projects first) by default.
+Please note that, not all my projects are displayed here, only those that I find interesting explaining and/or relevant for my profile.
+
+!!! Tip
+    Click on one of the projects (at the table) to be redirected to the report.
+
+<div id="project-table"></div>
+
+## About
+
 Here you will find relevant information about all my projects.
 
 At the end of this page you will find an [**index project table**](#index-table) displaying all my public projects.
@@ -13,7 +25,7 @@ I created this table as an easy navigation that presents the following features:
 Alternative to the table, the TOC at the left has organized report documents for these projects.
 Here each project is organized by their most relevant language.
 
-## About each project report
+## Project reports
 
 Within each project, the fist thing you will encounter is a table like this:
 
@@ -34,10 +46,3 @@ Then, each project report will display **three main sections**:
 - **Summary**: Vertical overview of the project with a GIF (if applies) displaying how the project works.
 - **Motivation**: The reason why I chose to code any project.
 - **Project road**: Here I describe how I thought and solve the problems through the development. There might be multiple subsections for organisation purposes.
-
-## Index table
-
-Here you find the project table, organized by creation date (newest projects first) by default.
-Please note that, not all my projects are displayed here, only those that I find interesting explaining and/or relevant for my profile.
-
-<div id="project-table"></div>

@@ -8,14 +8,4 @@ I work as an algorithm engineer, but on my free time I develop OpenSource code t
     <img alt="Most used languages: Python, Rust, C++, Javascript, HTML" src="https://raw.githubusercontent.com/Jtachan/Jtachan/refs/heads/main/profile/top_langs.svg"/>
 </div>
 
-These are the last 5 personal projects where I have commited and pushed changes **on the default branch** (not considering this website).
-
-<table>
-    <tr>{{ get_table_headers("simple") }}</tr>
-    {% for project in projects[:5] -%}
-        <tr>{{ load_simple_table_row(project) }}</tr>
-    {% endfor %}
-</table>
-
-!!! Note
-    See the [**index table**](projects/index.md#index-table) to visualize all my personal projects.
+See the [**index table**](projects/index.md#index-table) to visualize all my portfolio projects.
