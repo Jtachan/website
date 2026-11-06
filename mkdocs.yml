@@ -20,10 +20,8 @@ nav:
   - Contributions:
       - Contributions: contributions/index.md
       - PTB: contributions/ptb.md
-  - Publications:
-      - Publications: publications/index.md
       - Thesis:
-          - Vehicle Model Predictor: publications/VMP.md
+          - Vehicle Model Predictor: contributions/VMP.md
 
 exclude_docs: |
   *.txt
