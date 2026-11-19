@@ -8,7 +8,7 @@ With it, the model could help at autonomous driving applications.
 Within the main idea, it was desired to implement the model at an odometry application to improve the efficiency of the *Unscented Kalman Filter* (UKF).
 
 <div style="display: flex; justify-content: center">
-    <img src="../../assets/images/vmp/full_vehicle.png" width=500 alt="vehicle_model">
+    <img src="../assets/images/vmp/full_vehicle.png" width=500 alt="vehicle_model">
 </div>
 
 ## Project specifications
@@ -23,7 +23,7 @@ The first step was to set all the signals and variables that the model would nee
     - Vehicle speed: $V$
 
 <div style="display: flex; justify-content: center">
-  <img src="../../assets/images/vmp/rpy.png" width=500 alt="roll_pitch_yaw">
+  <img src="../assets/images/vmp/rpy.png" width=500 alt="roll_pitch_yaw">
 </div>  
 
 Some additional criteria was also specified to simplify the model:
@@ -44,7 +44,7 @@ However, this data has to be transformed into a front tyre rotation to be used a
 By following the Ackerman turning model, the rotation of the tyre is greater at the inner wheel than the outer.
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/Ackerman.png" alt="ackerman" width=500>
+<img src="../assets/images/vmp/Ackerman.png" alt="ackerman" width=500>
 </div>
 
 With this information, the final solution will show the ratio steering wheel / middle tyre.
@@ -53,7 +53,7 @@ For the ratio calculation, a Citröen C4 is used as the test model for all physi
 Thus, the first measurement was for the tyres rotation, obtaining the following results:
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/tyres_rotation.png" alt="tyres_rotation" width=650>
+<img src="../assets/images/vmp/tyres_rotation.png" alt="tyres_rotation" width=650>
 </div>
 
 At the graph, the orange function represents the left tyre and the blue one, the right tyre.
@@ -85,7 +85,7 @@ These can be found at any vehicle by realizing two weight measurements and apply
 
 | First measurement | Second measurement|
 | --- | --- |
-|<img src="../../assets/images/vmp/side_cg.png" alt="CG" width=450> | <img src="../../assets/images/vmp/side_elev_cg.png" alt="elevated_CG" width=450>|
+|<img src="../assets/images/vmp/side_cg.png" alt="CG" width=450> | <img src="../assets/images/vmp/side_elev_cg.png" alt="elevated_CG" width=450>|
 
 With the **first measurement** it's known the front and rear mass ($M_{f}, M_{r}$).
 Applying these terms to the equilibrium equation, the distance from CG to the front and the rear distance ($l_{f}, l_{r}$) are found, defining the CG position along the X axis.
@@ -121,7 +121,7 @@ There are also two anti-roll rods: one joining the front tyres and one joining t
 Thus, the last part to characterize of the vehicle is the system of the dampers.
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/dumper.png" alt="dumper" width=250>
+<img src="../assets/images/vmp/dumper.png" alt="dumper" width=250>
 </div>
 
 The compression force that experiences a damper ($F_{ci}$) is defined by a second order equation, in function of the chassis displacement:
@@ -197,7 +197,7 @@ As it can be noticed, a control signal is the rotation of the front wheel ($\del
 Previously has been proven how to obtain this parameter prom the steering wheel position, so from now on all equations will show only the $\delta$ parameter.
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/bicycle.png" alt="bicycle" width=500>
+<img src="../assets/images/vmp/bicycle.png" alt="bicycle" width=500>
 </div>
 
 The basics of physics establish that a coefficient of friction $\mu$ is needed, between the tyres and the road, for the vehicle being able to travel.
@@ -208,7 +208,7 @@ A clear example of the vehicle slipping is driving on ice.
 The difference of the ideal track and the real one is defined the slip angle ($\beta$).
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/slip_angle.png" alt="slip_angle" width=500>
+<img src="../assets/images/vmp/slip_angle.png" alt="slip_angle" width=500>
 </div>
 
 With the $\beta$ the instantaneous trajectory ($\gamma$) is defined as the sum of the yaw and the slip angle.
@@ -276,7 +276,7 @@ To calculate how the pitch evolves, a side-vehicle model has to be analyzed.
 Within it, the vehicle rotates around a Pitch Center point ($PC$), which is not at the same position as the CG.
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/side_car.png" alt="side_car" width=600>
+<img src="../assets/images/vmp/side_car.png" alt="side_car" width=600>
 </div>
 
 As it can be seen at the image, the analysis is carried out by comparing the equations for $M_{y}$ resultant of the top and the bottom forces.
@@ -312,7 +312,7 @@ This affects to:
   - The distance to the Roll Center (RC), due its axis is tilted and not parallel to the ground
 
 <div style="display: flex; justify-content: center">
-<img src="../../assets/images/vmp/front_car.png" alt="front_car" width=550>
+<img src="../assets/images/vmp/front_car.png" alt="front_car" width=550>
 </div>
 
 To simplify the calculus, the only approximation to be made is to consider that RC is in fact at the same distance.
