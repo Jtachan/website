@@ -1,0 +1,106 @@
+[project]
+site_name = "Jtachan website"
+site_description = "Findings, thoughts, tutorials, work. Pieces of my mind!"
+site_url = "https://jtachan.github.io/website/"
+repo_url = "https://github.com/Jtachan/website/"
+repo_name = "Jtachan/website"
+
+nav = [
+    { "Home" = [
+        { "Home" = "index.md" },
+        { "Know me better" = "jgo/about.md" }
+    ] },
+    { "Projects" = [
+        { "Projects" = "projects/index.md" },
+        { "Python" = [
+            { "PyBackport" = "projects/pybackport.md" },
+            { "Enigma Cipher" = "projects/enigma.md" }
+        ]},
+        { "Rust" = [
+            { "Lognalyst" = "projects/lognalyst.md" }
+        ] },
+        { "JavaScript" = [
+            { "DnD Spell Table" = "projects/spells.md" }
+        ] }
+    ] },
+    { "Contributions" = [
+        { "Contributions" = "contributions/index.md" },
+        { "Collaborations" = [
+            { "PTB" = "contributions/ptb.md" }
+        ] },
+        { "Thesis" = [
+            { "Vehicle Model Predictor" = "contributions/VMP.md" }
+        ] }
+    ] },
+]
+
+exclude_docs = """
+*.txt
+_templates/*
+"""
+
+extra_javascript = [
+  # Self JS scripts-configs
+  "assets/js/project_table.js",
+  "assets/js/mathjax_cfg.js",
+  # Math (LaTeX) support
+  "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+]
+
+extra_css = [
+  "assets/stylesheet/tables.css",
+  "assets/stylesheet/theme.css",
+]
+
+[project.theme]
+variant = "classic"
+logo = "https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png"
+favicon = "https://raw.githubusercontent.com/Jtachan/assets/refs/heads/main/logo/jgg_logo_with_center.png"
+features = [
+  "announce.dismiss",
+  "content.tooltips",
+  "content.code.annotate",
+  "content.code.copy",
+  "navigation.instant",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.sections",
+  "search.suggest",
+  "search.highlight",
+  "toc.follow",
+]
+
+[project.theme.font]
+text = "Source Serif 4"
+code = "Source Code Pro"
+
+[[project.theme.palette]]
+scheme = "rust"
+primary = "custom"
+accent = "custom"
+
+[project.markdown_extensions.admonition]  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admonition#supported-types
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
+[project.plugins.search]
+[project.plugins.macros]
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/jtachan"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/jaime-gonzalezg/"
