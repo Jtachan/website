@@ -59,11 +59,7 @@
 /* Top header */
 [data-md-color-scheme="rust"] .md-search__button {
   color: var(--md-default-bg-color);
-  background-color: var(--md-default-fg-color--light);
-}
-
-[data-md-color-scheme="rust"] .md-search__button::after {
-  color: var(--md-primary-fg-color);
+  background-color: var(--md-default-fg-color);
 }
 
 [data-md-color-scheme="rust"] .md-header, .md-tabs {
