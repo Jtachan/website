@@ -1,5 +1,3 @@
-mkdocs<2
-mkdocs-material
+zensical
 mkdocs-macros-plugin
 ruff
-requests

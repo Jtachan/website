@@ -1,3 +1,4 @@
 site/
 .venv
 .env
+.cache
