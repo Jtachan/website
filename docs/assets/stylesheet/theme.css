@@ -46,18 +46,29 @@
 [data-md-color-scheme="rust"] h2,
 [data-md-color-scheme="rust"] h3,
 [data-md-color-scheme="rust"] h4 {
-  color: #5c3b1e;
+  color: var(--md-typeset-table-color);
   font-weight: 600;
 }
 
 /* Navigation sidebar */
 [data-md-color-scheme="rust"] .md-nav {
   background-color: #e1e1db;
+  color: var(--md-default-fg-color);
 }
 
 /* Top header */
-[data-md-color-scheme="rust"] .md-header {
+[data-md-color-scheme="rust"] .md-search__button {
+  color: var(--md-default-bg-color);
+  background-color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="rust"] .md-search__button::after {
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="rust"] .md-header, .md-tabs {
   background-color: #3b2e2a;
+  color: var(--md-default-bg-color);
 }
 
 /* Code blocks */
