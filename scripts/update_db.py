@@ -17,7 +17,7 @@ BASE_ENTRIES = {
     "status": "",  # Either ongoing, maintained or finished
 }
 PROJECTS_DB_PATH = Path(__file__).parent.parent / "docs" / "projects_db.json"
-IGNORE_FETCH_COMMIT = False
+FORCE_FETCH_COMMIT = False
 
 
 def check_db_entries():
@@ -41,14 +41,14 @@ def check_db_entries():
         last_commit_fetched = (
             entry["status"] == "finished" and entry["last_commit"] != ""
         )
-        if not IGNORE_FETCH_COMMIT and repo_provided and not last_commit_fetched:
-            entry["last_commit"] = get_repo_dates(entry["repo"])
+        if repo_provided and (FORCE_FETCH_COMMIT or not last_commit_fetched):
+            entry["last_commit"] = get_repo_last_update(entry["repo"])
 
     with open(PROJECTS_DB_PATH, "w", encoding="utf-8") as db:
         json.dump(entries, db, indent=2)
 
 
-def get_repo_dates(repo_link: str) -> tuple[str, str]:
+def get_repo_last_update(repo_link: str) -> str:
     """Provides the dates of the newest (last) commit.
 
     The code uses the GitHub REST API, which has a limit of 60 requests per hour.
